@@ -1,0 +1,62 @@
+[gd_scene load_steps=10 format=3 uid="uid://dgusnvexu61mp"]
+
+[ext_resource type="Texture2D" uid="uid://wx0gp6hnmsa2" path="res://Recursos/Enemies/caracolgif-Sheet120x60.png" id="1_g8pbb"]
+[ext_resource type="PackedScene" uid="uid://d31qnbhswewet" path="res://scene/hazard_area.tscn" id="2_j66om"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_y08ih"]
+atlas = ExtResource("1_g8pbb")
+region = Rect2(0, 0, 120, 60)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ssnr4"]
+atlas = ExtResource("1_g8pbb")
+region = Rect2(120, 0, 120, 60)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ou3ht"]
+atlas = ExtResource("1_g8pbb")
+region = Rect2(240, 0, 120, 60)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2eqgy"]
+atlas = ExtResource("1_g8pbb")
+region = Rect2(360, 0, 120, 60)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_8s17w"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_y08ih")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ssnr4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ou3ht")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2eqgy")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1ecl7"]
+size = Vector2(56, 28)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_g4bfw"]
+size = Vector2(49, 20)
+
+[node name="CharacterBody2D" type="CharacterBody2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_8s17w")
+
+[node name="HazardArea" parent="." instance=ExtResource("2_j66om")]
+position = Vector2(17, 6)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HazardArea"]
+position = Vector2(20, 8)
+shape = SubResource("RectangleShape2D_1ecl7")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(34.5, 17)
+shape = SubResource("RectangleShape2D_g4bfw")

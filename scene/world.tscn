@@ -1,0 +1,110 @@
+[gd_scene load_steps=7 format=3 uid="uid://bvrxnaqhvdn30"]
+
+[ext_resource type="Script" path="res://scripts/world.gd" id="1_7twfy"]
+[ext_resource type="PackedScene" uid="uid://bv770a5u7bkfy" path="res://scene/player.tscn" id="2_8gtru"]
+[ext_resource type="PackedScene" uid="uid://bdsghkr1c5dmi" path="res://scene/level_completed.tscn" id="5_gfbtv"]
+
+[sub_resource type="Animation" id="Animation_pjsq2"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CanvasLayer/StartIn/CenterContainer/StartInLabel:text")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": ["Start in : 3"]
+}
+
+[sub_resource type="Animation" id="Animation_q677m"]
+resource_name = "countdown"
+length = 3.2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CanvasLayer/StartIn/CenterContainer/StartInLabel:text")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.2, 1.2, 2.2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": ["Start in : 3", "Start in : 2", "Start in : 1"]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_lh2mb"]
+_data = {
+"RESET": SubResource("Animation_pjsq2"),
+"countdown": SubResource("Animation_q677m")
+}
+
+[node name="World" type="Node2D"]
+script = ExtResource("1_7twfy")
+
+[node name="Player" parent="." instance=ExtResource("2_8gtru")]
+position = Vector2(19, 605)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="LevelCompleted" parent="CanvasLayer" instance=ExtResource("5_gfbtv")]
+visible = false
+
+[node name="StartIn" type="ColorRect" parent="CanvasLayer"]
+unique_name_in_owner = true
+visible = false
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.188235)
+
+[node name="CenterContainer" type="CenterContainer" parent="CanvasLayer/StartIn"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="StartInLabel" type="Label" parent="CanvasLayer/StartIn/CenterContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Start in : 3"
+
+[node name="CenterContainer" type="CenterContainer" parent="CanvasLayer"]
+anchors_preset = 10
+anchor_right = 1.0
+offset_top = 28.0
+offset_bottom = 51.0
+grow_horizontal = 2
+
+[node name="LevelTimeLabel" type="Label" parent="CanvasLayer/CenterContainer"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(32, 0)
+layout_mode = 2
+vertical_alignment = 1
+
+[node name="CenterContainer2" type="CenterContainer" parent="CanvasLayer"]
+offset_right = 159.0
+offset_bottom = 51.0
+
+[node name="countLabel" type="Label" parent="CanvasLayer/CenterContainer2"]
+custom_minimum_size = Vector2(23, 23)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 19
+text = "Puntos: "
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+process_mode = 3
+autoplay = "countdown"
+libraries = {
+"": SubResource("AnimationLibrary_lh2mb")
+}
+
+[connection signal="next_level" from="CanvasLayer/LevelCompleted" to="." method="_on_level_completed_next_level"]
+[connection signal="retry" from="CanvasLayer/LevelCompleted" to="." method="_on_level_completed_retry"]

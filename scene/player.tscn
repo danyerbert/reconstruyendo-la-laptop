@@ -1,0 +1,149 @@
+[gd_scene load_steps=19 format=3 uid="uid://bv770a5u7bkfy"]
+
+[ext_resource type="Script" path="res://scripts/player.gd" id="1_nn8cs"]
+[ext_resource type="Resource" uid="uid://d12g2kef84o28" path="res://scripts/recursos_juegos/DefaultMovementData.tres" id="2_ct1qk"]
+[ext_resource type="Texture2D" uid="uid://digxvmybsnllq" path="res://Recursos/Movimiento RET/Salto/caminandonuevo-Sheet80x80.png" id="2_fltxt"]
+[ext_resource type="Texture2D" uid="uid://j8108ybeyysm" path="res://Recursos/Movimiento RET/Salto/testjump2.png" id="4_ancbs"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_efa7k"]
+atlas = ExtResource("2_fltxt")
+region = Rect2(0, 0, 80, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0fw6b"]
+atlas = ExtResource("4_ancbs")
+region = Rect2(240, 0, 80, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_g4t1u"]
+atlas = ExtResource("4_ancbs")
+region = Rect2(80, 0, 80, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dy0mx"]
+atlas = ExtResource("4_ancbs")
+region = Rect2(160, 0, 80, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_u7fuf"]
+atlas = ExtResource("4_ancbs")
+region = Rect2(240, 0, 80, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kjyt7"]
+atlas = ExtResource("4_ancbs")
+region = Rect2(320, 0, 80, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_a7tyk"]
+atlas = ExtResource("4_ancbs")
+region = Rect2(400, 0, 80, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_v1tsi"]
+atlas = ExtResource("2_fltxt")
+region = Rect2(80, 0, 80, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_uujrf"]
+atlas = ExtResource("2_fltxt")
+region = Rect2(160, 0, 80, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7exac"]
+atlas = ExtResource("2_fltxt")
+region = Rect2(240, 0, 80, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_f611m"]
+atlas = ExtResource("2_fltxt")
+region = Rect2(0, 0, 80, 80)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_5qxt4"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_efa7k")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0fw6b")
+}],
+"loop": true,
+"name": &"jump",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_g4t1u")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dy0mx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_u7fuf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kjyt7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_a7tyk")
+}],
+"loop": true,
+"name": &"prueba",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_v1tsi")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_uujrf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7exac")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_f611m")
+}],
+"loop": true,
+"name": &"run",
+"speed": 8.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_sp6xo"]
+size = Vector2(32, 51.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_nr6qy"]
+size = Vector2(24, 42)
+
+[node name="Player" type="CharacterBody2D" groups=["jugador"]]
+collision_layer = 2
+floor_stop_on_slope = false
+script = ExtResource("1_nn8cs")
+movement_data = ExtResource("2_ct1qk")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(4, -37)
+sprite_frames = SubResource("SpriteFrames_5qxt4")
+animation = &"idle"
+frame_progress = 0.376266
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(4, -27.75)
+shape = SubResource("RectangleShape2D_sp6xo")
+
+[node name="HazardDetector" type="Area2D" parent="."]
+collision_layer = 0
+collision_mask = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HazardDetector"]
+position = Vector2(4, -27)
+shape = SubResource("RectangleShape2D_nr6qy")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+scale = Vector2(2, 2)
+skew = 0.174533
+ignore_rotation = false
+zoom = Vector2(1.5, 1.5)
+limit_left = 0
+limit_top = 0
+limit_bottom = 648
+drag_horizontal_enabled = true
+drag_vertical_enabled = true
+
+[connection signal="area_entered" from="HazardDetector" to="." method="_on_hazard_detector_area_entered"]

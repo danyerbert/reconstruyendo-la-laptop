@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3 uid="uid://car3ajkly1to8"]
+
+[ext_resource type="Texture2D" uid="uid://n5p673i3xh5j" path="res://Recursos/Partes y piezas/cargador.png" id="1_q0uq8"]
+[ext_resource type="Script" path="res://scripts/cargador.gd" id="1_uy5dr"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_x3dbc"]
+size = Vector2(23, 28)
+
+[node name="cargador" type="Area2D" groups=["cargador"]]
+collision_layer = 0
+collision_mask = 2
+script = ExtResource("1_uy5dr")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+texture = ExtResource("1_q0uq8")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-2.5, 1)
+shape = SubResource("RectangleShape2D_x3dbc")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

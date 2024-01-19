@@ -1,0 +1,62 @@
+[gd_scene load_steps=4 format=3 uid="uid://bdsghkr1c5dmi"]
+
+[ext_resource type="Script" path="res://scripts/level_completed.gd" id="1_x5s0l"]
+[ext_resource type="Texture2D" uid="uid://dqd7c507gxabv" path="res://Recursos/Fondos/1nivel de montaña menu.jpg" id="2_are02"]
+
+[sub_resource type="Theme" id="Theme_njv5p"]
+
+[node name="LevelCompleted" type="ColorRect"]
+process_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.282353)
+script = ExtResource("1_x5s0l")
+
+[node name="CenterContainer" type="CenterContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Sprite2D" type="Sprite2D" parent="CenterContainer"]
+position = Vector2(573, 321.5)
+scale = Vector2(1.536, 1.278)
+texture = ExtResource("2_are02")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="CenterContainer/VBoxContainer"]
+layout_mode = 2
+theme = SubResource("Theme_njv5p")
+theme_type_variation = &"HeaderLarge"
+theme_override_colors/font_color = Color(0.745098, 0.278431, 0.34902, 1)
+theme_override_colors/font_shadow_color = Color(0.752941, 0.752941, 0.752941, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+text = "¡ NIVEL COMPLETADO !"
+horizontal_alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CenterContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="RetryButton" type="Button" parent="CenterContainer/VBoxContainer/HBoxContainer"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(64, 16)
+layout_mode = 2
+text = "INTENTAR DE NUEVO"
+
+[node name="NextLevelButton" type="Button" parent="CenterContainer/VBoxContainer/HBoxContainer"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(64, 16)
+layout_mode = 2
+text = "SIGUIENTE NIVEL"
+icon_alignment = 1
+expand_icon = true
+
+[connection signal="pressed" from="CenterContainer/VBoxContainer/HBoxContainer/RetryButton" to="." method="_on_retry_button_pressed"]
+[connection signal="pressed" from="CenterContainer/VBoxContainer/HBoxContainer/NextLevelButton" to="." method="_on_next_level_button_pressed"]

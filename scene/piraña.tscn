@@ -1,0 +1,85 @@
+[gd_scene load_steps=13 format=3 uid="uid://b3ktv55xck8xw"]
+
+[ext_resource type="Texture2D" uid="uid://dxgxwj0p2p3ux" path="res://Recursos/Enemies/piraña salto-Sheet.png" id="1_o6fq7"]
+[ext_resource type="PackedScene" uid="uid://d31qnbhswewet" path="res://scene/hazard_area.tscn" id="2_d2v8p"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hv837"]
+atlas = ExtResource("1_o6fq7")
+region = Rect2(120, 0, 120, 120)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6p6w2"]
+atlas = ExtResource("1_o6fq7")
+region = Rect2(240, 0, 120, 120)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6dg5p"]
+atlas = ExtResource("1_o6fq7")
+region = Rect2(360, 0, 120, 120)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_o23f5"]
+atlas = ExtResource("1_o6fq7")
+region = Rect2(480, 0, 120, 120)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dew1q"]
+atlas = ExtResource("1_o6fq7")
+region = Rect2(600, 0, 120, 120)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_khf60"]
+atlas = ExtResource("1_o6fq7")
+region = Rect2(720, 0, 120, 120)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jsw11"]
+atlas = ExtResource("1_o6fq7")
+region = Rect2(0, 0, 120, 120)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_gk41o"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hv837")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6p6w2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6dg5p")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_o23f5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dew1q")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_khf60")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jsw11")
+}],
+"loop": true,
+"name": &"nadar",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_jytdt"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_n5fpy"]
+radius = 36.8782
+
+[node name="piraña" type="CharacterBody2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+sprite_frames = SubResource("SpriteFrames_gk41o")
+animation = &"nadar"
+autoplay = "nadar"
+frame_progress = 0.419841
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 16)
+shape = SubResource("CircleShape2D_jytdt")
+
+[node name="HazardArea" parent="." instance=ExtResource("2_d2v8p")]
+position = Vector2(0, 16)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HazardArea"]
+shape = SubResource("CircleShape2D_n5fpy")

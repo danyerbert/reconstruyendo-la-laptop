@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3 uid="uid://bre2xvnig73q8"]
+
+[ext_resource type="Texture2D" uid="uid://dm0dpfnsg4ka6" path="res://Recursos/Partes y piezas/carcasa.png" id="1_5kg72"]
+[ext_resource type="Script" path="res://scripts/carcasa.gd" id="1_ub4mb"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_l62ng"]
+size = Vector2(43, 39)
+
+[node name="carcasa" type="Area2D" groups=["carcasa"]]
+collision_layer = 0
+collision_mask = 2
+script = ExtResource("1_ub4mb")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+texture = ExtResource("1_5kg72")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(2.5, -3.5)
+shape = SubResource("RectangleShape2D_l62ng")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

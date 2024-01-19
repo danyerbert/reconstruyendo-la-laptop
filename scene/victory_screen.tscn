@@ -1,0 +1,130 @@
+[gd_scene load_steps=16 format=3 uid="uid://b3snflrdyl78g"]
+
+[ext_resource type="Script" path="res://scripts/victory_screen.gd" id="1_rsy25"]
+[ext_resource type="Texture2D" uid="uid://pv63k1is53gf" path="res://Recursos/Movimiento RET/lo haz logrado-Sheet.png" id="2_a868c"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5dpqh"]
+atlas = ExtResource("2_a868c")
+region = Rect2(0, 0, 80, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_eunfa"]
+atlas = ExtResource("2_a868c")
+region = Rect2(80, 0, 80, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1tma7"]
+atlas = ExtResource("2_a868c")
+region = Rect2(160, 0, 80, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5rgw3"]
+atlas = ExtResource("2_a868c")
+region = Rect2(240, 0, 80, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ehk21"]
+atlas = ExtResource("2_a868c")
+region = Rect2(320, 0, 80, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cu311"]
+atlas = ExtResource("2_a868c")
+region = Rect2(400, 0, 80, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4fnnl"]
+atlas = ExtResource("2_a868c")
+region = Rect2(480, 0, 80, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_b8u5b"]
+atlas = ExtResource("2_a868c")
+region = Rect2(560, 0, 80, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ltc3n"]
+atlas = ExtResource("2_a868c")
+region = Rect2(640, 0, 80, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_coth7"]
+atlas = ExtResource("2_a868c")
+region = Rect2(720, 0, 80, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xn51k"]
+atlas = ExtResource("2_a868c")
+region = Rect2(800, 0, 80, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3v465"]
+atlas = ExtResource("2_a868c")
+region = Rect2(880, 0, 80, 80)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_n6oo6"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5dpqh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_eunfa")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1tma7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5rgw3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ehk21")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cu311")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4fnnl")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_b8u5b")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ltc3n")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_coth7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xn51k")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3v465")
+}],
+"loop": true,
+"name": &"celebracion",
+"speed": 5.0
+}]
+
+[node name="VictoryScreen" type="CenterContainer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_rsy25")
+
+[node name="Sprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(570, 319)
+scale = Vector2(7.9, 8.025)
+sprite_frames = SubResource("SpriteFrames_n6oo6")
+animation = &"celebracion"
+autoplay = "celebracion"
+frame_progress = 0.0704222
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="VBoxContainer"]
+modulate = Color(0.219608, 0.192157, 0.494118, 1)
+layout_mode = 2
+theme_override_font_sizes/font_size = 24
+text = "Has Ganado!"
+horizontal_alignment = 1
+
+[node name="MenuButton" type="Button" parent="VBoxContainer"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(16, 16)
+layout_mode = 2
+text = "VOLVER AL MENU PRINCIPAL"
+
+[connection signal="pressed" from="VBoxContainer/MenuButton" to="." method="_on_menu_button_pressed"]

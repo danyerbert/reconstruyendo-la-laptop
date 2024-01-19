@@ -1,0 +1,79 @@
+[gd_scene load_steps=12 format=3 uid="uid://bmhdwqhkifk7s"]
+
+[ext_resource type="PackedScene" uid="uid://d31qnbhswewet" path="res://scene/hazard_area.tscn" id="1_tuwqr"]
+[ext_resource type="Texture2D" uid="uid://bjm3v3gjje83" path="res://Recursos/Enemies/pez-Sheet 60x60.png" id="2_gh3u4"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wt7xv"]
+atlas = ExtResource("2_gh3u4")
+region = Rect2(60, 0, 60, 60)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hsmqg"]
+atlas = ExtResource("2_gh3u4")
+region = Rect2(120, 0, 60, 60)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7u8rb"]
+atlas = ExtResource("2_gh3u4")
+region = Rect2(180, 0, 60, 60)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_w7kba"]
+atlas = ExtResource("2_gh3u4")
+region = Rect2(240, 0, 60, 60)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_d54rl"]
+atlas = ExtResource("2_gh3u4")
+region = Rect2(300, 0, 60, 60)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_odyns"]
+atlas = ExtResource("2_gh3u4")
+region = Rect2(360, 0, 60, 60)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_hrc3w"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wt7xv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hsmqg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7u8rb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_w7kba")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_d54rl")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_odyns")
+}],
+"loop": true,
+"name": &"jump",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_2jwmd"]
+radius = 5.83095
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ox051"]
+
+[node name="pez" type="CharacterBody2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+sprite_frames = SubResource("SpriteFrames_hrc3w")
+animation = &"jump"
+autoplay = "jump"
+frame = 5
+frame_progress = 0.493459
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(16, 16)
+shape = SubResource("CircleShape2D_2jwmd")
+
+[node name="HazardArea" parent="." instance=ExtResource("1_tuwqr")]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HazardArea"]
+position = Vector2(16, 16)
+shape = SubResource("CircleShape2D_ox051")

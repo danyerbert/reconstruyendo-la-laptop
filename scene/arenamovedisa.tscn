@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://gvafwkmmh8ty"]
+
+[ext_resource type="Texture2D" uid="uid://devuckx67rv7i" path="res://Recursos/Object/decierto.png" id="1_4ttut"]
+[ext_resource type="PackedScene" uid="uid://d31qnbhswewet" path="res://scene/hazard_area.tscn" id="2_xuimo"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_je1vt"]
+size = Vector2(100.654, 15.5172)
+
+[node name="arenamovedisa" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(1.90735e-06, -2.98023e-08)
+scale = Vector2(1.53, 0.966667)
+texture = ExtResource("1_4ttut")
+
+[node name="HazardArea" parent="Sprite2D" instance=ExtResource("2_xuimo")]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite2D/HazardArea"]
+position = Vector2(0, -0.517242)
+shape = SubResource("RectangleShape2D_je1vt")

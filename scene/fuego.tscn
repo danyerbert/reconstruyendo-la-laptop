@@ -1,0 +1,70 @@
+[gd_scene load_steps=11 format=3 uid="uid://c1r8a4b6rnhtm"]
+
+[ext_resource type="Texture2D" uid="uid://dgcbk4lsqhy4i" path="res://Recursos/Object/fire_big.png" id="1_a7i07"]
+[ext_resource type="PackedScene" uid="uid://d31qnbhswewet" path="res://scene/hazard_area.tscn" id="2_3rnxc"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nwhxa"]
+atlas = ExtResource("1_a7i07")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_h2j50"]
+atlas = ExtResource("1_a7i07")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wp2l6"]
+atlas = ExtResource("1_a7i07")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7hvt4"]
+atlas = ExtResource("1_a7i07")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_eexnq"]
+atlas = ExtResource("1_a7i07")
+region = Rect2(128, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3g8de"]
+atlas = ExtResource("1_a7i07")
+region = Rect2(160, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_q2udm"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nwhxa")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_h2j50")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wp2l6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7hvt4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_eexnq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3g8de")
+}],
+"loop": true,
+"name": &"ardiente",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_r6lqs"]
+
+[node name="fuego" type="Node2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_q2udm")
+animation = &"ardiente"
+autoplay = "ardiente"
+frame_progress = 0.490135
+
+[node name="HazardArea" parent="AnimatedSprite2D" instance=ExtResource("2_3rnxc")]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AnimatedSprite2D/HazardArea"]
+position = Vector2(0, 11)
+shape = SubResource("CircleShape2D_r6lqs")
