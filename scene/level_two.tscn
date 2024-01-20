@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://bxut1sflf6ly0"]
+[gd_scene load_steps=12 format=3 uid="uid://bxut1sflf6ly0"]
 
 [ext_resource type="PackedScene" uid="uid://bvrxnaqhvdn30" path="res://scene/world.tscn" id="1_1ymdc"]
 [ext_resource type="PackedScene" uid="uid://d3712ev3kfuq2" path="res://scene/level_tree.tscn" id="2_j7gyk"]
@@ -10,6 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://bmhdwqhkifk7s" path="res://scene/pez.tscn" id="8_gkvcm"]
 [ext_resource type="PackedScene" uid="uid://blwq6xc3lyj2d" path="res://scene/herramienta.tscn" id="9_2sphi"]
 [ext_resource type="PackedScene" uid="uid://bjgm3m744rx31" path="res://scene/partes y piezas/teclado.tscn" id="10_cujkr"]
+[ext_resource type="AudioStream" uid="uid://crdn8fnhb2c3h" path="res://Recursos/Canciones/Ready-to-play_by_alexey-anisimov.mp3" id="11_f5r5d"]
 
 [node name="World" instance=ExtResource("1_1ymdc")]
 next_level = ExtResource("2_j7gyk")
@@ -265,3 +266,8 @@ position = Vector2(1450, 590)
 [node name="teclado" parent="." index="79" instance=ExtResource("10_cujkr")]
 position = Vector2(2839, 424)
 scale = Vector2(0.5, 0.5)
+
+[node name="AudioStreamPlayer" parent="." index="80"]
+stream = ExtResource("11_f5r5d")
+volume_db = -10.0
+autoplay = true

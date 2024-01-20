@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://dsmqqyn11gd2t"]
+[gd_scene load_steps=17 format=3 uid="uid://dsmqqyn11gd2t"]
 
 [ext_resource type="PackedScene" uid="uid://bvrxnaqhvdn30" path="res://scene/world.tscn" id="1_hll0b"]
 [ext_resource type="PackedScene" uid="uid://bgcdbavvuop6f" path="res://scene/level_tile_map.tscn" id="2_1wlkl"]
@@ -11,6 +11,45 @@
 [ext_resource type="PackedScene" uid="uid://bojrahfg2tfjs" path="res://scene/destonillador.tscn" id="10_7wkro"]
 [ext_resource type="Texture2D" uid="uid://dfjx6sjcrieis" path="res://Recursos/Object/teclas de control n.png" id="10_yikxp"]
 [ext_resource type="Texture2D" uid="uid://dem05bwgsiita" path="res://Recursos/Object/salto teclas control.png" id="11_a2oy4"]
+[ext_resource type="AudioStream" uid="uid://b3idmpqrfb1n8" path="res://Recursos/Canciones/Whimsical-games_by_musicstockproduction.mp3" id="12_ir25t"]
+[ext_resource type="Script" path="res://scene/mundos/Cartel1.gd" id="13_pqpha"]
+
+[sub_resource type="Animation" id="Animation_evckw"]
+resource_name = "mostrar_texto"
+length = 5.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect/Label2:visible_ratio")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1.9, 2.9, 5),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [0.0, 0.5, 0.5, 1.0]
+}
+
+[sub_resource type="Animation" id="Animation_3pkjy"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect/Label2:visible_ratio")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [1.0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_8dly0"]
+_data = {
+"RESET": SubResource("Animation_3pkjy"),
+"mostrar_texto": SubResource("Animation_evckw")
+}
 
 [node name="World" instance=ExtResource("1_hll0b")]
 next_level = ExtResource("2_s7rm2")
@@ -202,6 +241,42 @@ layer_0/tile_data = PackedInt32Array(851931, 196608, 1, 851932, 262144, 1, 85193
 
 [node name="destonillador" parent="." index="55" instance=ExtResource("10_7wkro")]
 position = Vector2(2781, 516)
+
+[node name="AudioStreamPlayer" parent="." index="56"]
+stream = ExtResource("12_ir25t")
+volume_db = -10.0
+autoplay = true
+
+[node name="Cartel1" type="CanvasLayer" parent="." index="57"]
+script = ExtResource("13_pqpha")
+
+[node name="ColorRect" type="ColorRect" parent="Cartel1" index="0"]
+offset_left = 307.0
+offset_top = 245.0
+offset_right = 815.0
+offset_bottom = 373.0
+color = Color(0, 0.203922, 0.254902, 1)
+
+[node name="ReferenceRect" type="ReferenceRect" parent="Cartel1/ColorRect" index="0"]
+offset_right = 506.0
+offset_bottom = 126.0
+border_color = Color(0, 0, 0, 1)
+border_width = 10.0
+
+[node name="Label2" type="Label" parent="Cartel1/ColorRect" index="1"]
+offset_left = 20.0
+offset_top = 20.0
+offset_right = 478.0
+offset_bottom = 103.0
+text = "Pulsa A y D para moverte por el mapa. 
+
+Y la barra espaciadora para saltar."
+autowrap_mode = 3
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Cartel1" index="1"]
+libraries = {
+"": SubResource("AnimationLibrary_8dly0")
+}
 
 [connection signal="recolectar_herramientas" from="herramienta" to="." method="_on_herramienta_recolectar_herramientas"]
 [connection signal="recolectar_herramientas" from="herramienta2" to="." method="_on_herramienta_recolectar_herramientas"]

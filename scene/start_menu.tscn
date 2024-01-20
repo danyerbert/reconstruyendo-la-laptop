@@ -1,13 +1,14 @@
-[gd_scene load_steps=3 format=3 uid="uid://bxr6yh86dy3gb"]
+[gd_scene load_steps=4 format=3 uid="uid://bxr6yh86dy3gb"]
 
 [ext_resource type="Script" path="res://scripts/start_menu.gd" id="1_v26uh"]
 [ext_resource type="Texture2D" uid="uid://dqd7c507gxabv" path="res://Recursos/Fondos/1nivel de montaña menu.jpg" id="2_kt8k6"]
+[ext_resource type="AudioStream" uid="uid://dmdlvaoxf6u6u" path="res://Recursos/Canciones/Arcade_Machine_-_Nuclear_Wave.mp3" id="3_bbmlu"]
 
 [node name="StartMenu" type="Node2D"]
 script = ExtResource("1_v26uh")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(582.5, 322.5)
+position = Vector2(577, 322)
 scale = Vector2(1.54, 1.33)
 texture = ExtResource("2_kt8k6")
 
@@ -17,14 +18,18 @@ offset_left = 512.0
 offset_top = 428.0
 offset_right = 608.0
 offset_bottom = 459.0
-text = "Start Game"
+text = "Jugar"
 
 [node name="QuitButton" type="Button" parent="."]
-offset_left = 508.0
-offset_top = 471.0
-offset_right = 604.0
-offset_bottom = 502.0
-text = "Quit"
+offset_left = 512.0
+offset_top = 474.0
+offset_right = 608.0
+offset_bottom = 505.0
+text = "Salir"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_bbmlu")
+autoplay = true
 
 [connection signal="pressed" from="StartGameButton" to="." method="_on_start_game_button_pressed"]
 [connection signal="pressed" from="QuitButton" to="." method="_on_quit_button_pressed"]

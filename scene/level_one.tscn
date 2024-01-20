@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://d3ikrxou7pxrb"]
+[gd_scene load_steps=13 format=3 uid="uid://d3ikrxou7pxrb"]
 
 [ext_resource type="PackedScene" uid="uid://bvrxnaqhvdn30" path="res://scene/world.tscn" id="1_emxnq"]
 [ext_resource type="PackedScene" uid="uid://bxut1sflf6ly0" path="res://scene/level_two.tscn" id="2_hmyts"]
@@ -11,6 +11,7 @@
 [ext_resource type="PackedScene" uid="uid://dachjnwx0dsx0" path="res://scene/partes y piezas/disco_duro.tscn" id="8_8485p"]
 [ext_resource type="PackedScene" uid="uid://bmhdwqhkifk7s" path="res://scene/pez.tscn" id="10_8yukm"]
 [ext_resource type="PackedScene" uid="uid://b3ktv55xck8xw" path="res://scene/piraña.tscn" id="11_rymcv"]
+[ext_resource type="AudioStream" uid="uid://bw0puw7351pvj" path="res://Recursos/Canciones/Cunning-fox_by_musicstockproduction.mp3" id="12_b0c8b"]
 
 [node name="World" instance=ExtResource("1_emxnq")]
 next_level = ExtResource("2_hmyts")
@@ -249,3 +250,8 @@ scale = Vector2(0.5, 0.5)
 [node name="piraña5" parent="." index="75" instance=ExtResource("11_rymcv")]
 position = Vector2(2739, 625)
 scale = Vector2(0.5, 0.5)
+
+[node name="AudioStreamPlayer" parent="." index="76"]
+stream = ExtResource("12_b0c8b")
+volume_db = -10.0
+autoplay = true

@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://d3712ev3kfuq2"]
+[gd_scene load_steps=18 format=3 uid="uid://d3712ev3kfuq2"]
 
 [ext_resource type="PackedScene" uid="uid://bvrxnaqhvdn30" path="res://scene/world.tscn" id="1_hqukn"]
 [ext_resource type="PackedScene" uid="uid://bgcdbavvuop6f" path="res://scene/level_tile_map.tscn" id="2_cdsno"]
@@ -10,6 +10,7 @@
 [ext_resource type="Texture2D" uid="uid://cys7rx3j0oxpf" path="res://Recursos/Tilesets/tileset_dirt.png" id="8_y5kq4"]
 [ext_resource type="PackedScene" uid="uid://c1r8a4b6rnhtm" path="res://scene/fuego.tscn" id="9_f6tuy"]
 [ext_resource type="PackedScene" uid="uid://dofghashr6lju" path="res://scene/partes y piezas/memoria_ram.tscn" id="11_avttw"]
+[ext_resource type="AudioStream" uid="uid://cxrgx1xp1kx0n" path="res://Recursos/Canciones/Quirky-samba_by_musicstockproduction.mp3" id="12_hsqnd"]
 [ext_resource type="PackedScene" uid="uid://blwq6xc3lyj2d" path="res://scene/herramienta.tscn" id="13_p3v66"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_g46ah"]
@@ -560,3 +561,8 @@ position = Vector2(1906, 458)
 [node name="memoriaRam" parent="." index="51" instance=ExtResource("11_avttw")]
 position = Vector2(2151, 463)
 scale = Vector2(0.5, 0.5)
+
+[node name="AudioStreamPlayer" parent="." index="52"]
+stream = ExtResource("12_hsqnd")
+volume_db = -10.0
+autoplay = true
