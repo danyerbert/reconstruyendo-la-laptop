@@ -1,29 +1,50 @@
-[gd_scene load_steps=9 format=3 uid="uid://ddrjfl6lk7mw3"]
+[gd_scene load_steps=12 format=3 uid="uid://dkxhm06gjrcs5"]
 
 [ext_resource type="Script" path="res://scripts/caracol.gd" id="1_jk42v"]
-[ext_resource type="Texture2D" uid="uid://c35hagg1gf3rd" path="res://Recursos/Enemies/caracol.png" id="2_n3hp4"]
+[ext_resource type="Texture2D" uid="uid://gc1nes31hvb3" path="res://Recursos/Enemies/hormiga-Sheet-100x60.png" id="2_4fk8r"]
 [ext_resource type="PackedScene" uid="uid://d31qnbhswewet" path="res://scene/hazard_area.tscn" id="3_p6uis"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_2v3gk"]
-atlas = ExtResource("2_n3hp4")
-region = Rect2(0, 0, 55, 51)
+[sub_resource type="AtlasTexture" id="AtlasTexture_lyq8m"]
+atlas = ExtResource("2_4fk8r")
+region = Rect2(0, 0, 49, 28)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_bhljs"]
-atlas = ExtResource("2_n3hp4")
-region = Rect2(59, 0, 55, 51)
+[sub_resource type="AtlasTexture" id="AtlasTexture_slfai"]
+atlas = ExtResource("2_4fk8r")
+region = Rect2(49, 0, 49, 28)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0ovl7"]
+atlas = ExtResource("2_4fk8r")
+region = Rect2(98, 0, 49, 28)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pu03o"]
+atlas = ExtResource("2_4fk8r")
+region = Rect2(147, 0, 49, 28)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_u2y85"]
+atlas = ExtResource("2_4fk8r")
+region = Rect2(196, 0, 49, 28)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_fig07"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_2v3gk")
+"texture": SubResource("AtlasTexture_lyq8m")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_bhljs")
+"texture": SubResource("AtlasTexture_slfai")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0ovl7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pu03o")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_u2y85")
 }],
 "loop": true,
 "name": &"run",
-"speed": 3.0
+"speed": 5.0
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_oatdq"]
@@ -32,7 +53,7 @@ size = Vector2(44, 2.875)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qghhm"]
 size = Vector2(44, 20.9375)
 
-[node name="caracol" type="CharacterBody2D"]
+[node name="hormiga" type="CharacterBody2D"]
 collision_mask = 3
 script = ExtResource("1_jk42v")
 
@@ -42,6 +63,7 @@ position = Vector2(-3, -10)
 scale = Vector2(0.890909, 0.807843)
 sprite_frames = SubResource("SpriteFrames_fig07")
 animation = &"run"
+frame_progress = 0.649056
 
 [node name="Node2D" type="Node2D" parent="."]
 
@@ -56,12 +78,12 @@ scale = Vector2(0.4, 0.4)
 target_position = Vector2(-60, 0)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-1, 9)
+position = Vector2(-3, -2)
 shape = SubResource("RectangleShape2D_oatdq")
 
 [node name="HazardArea" parent="." instance=ExtResource("3_p6uis")]
-position = Vector2(7, 7)
+position = Vector2(0, -7)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="HazardArea"]
-position = Vector2(-8, -7)
+position = Vector2(-3, -4)
 shape = SubResource("RectangleShape2D_qghhm")

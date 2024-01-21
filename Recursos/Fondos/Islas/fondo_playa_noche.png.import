@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dkdpxrlm3feew"
-path="res://.godot/imported/3er nivel islas  NE.jpg-8ccc87bbbe98643f756caa507fb4360a.ctex"
+uid="uid://ccjsqnxo6nc47"
+path="res://.godot/imported/fondo_playa_noche.png-296a5310619a9c0acec6c1bc1d1fd8be.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Recursos/Fondos/Islas/3er nivel islas  NE.jpg"
-dest_files=["res://.godot/imported/3er nivel islas  NE.jpg-8ccc87bbbe98643f756caa507fb4360a.ctex"]
+source_file="res://Recursos/Fondos/Islas/fondo_playa_noche.png"
+dest_files=["res://.godot/imported/fondo_playa_noche.png-296a5310619a9c0acec6c1bc1d1fd8be.ctex"]
 
 [params]
 
