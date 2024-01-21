@@ -1,0 +1,110 @@
+[gd_scene load_steps=9 format=3 uid="uid://bmw7w0kdk6ckf"]
+
+[ext_resource type="Texture2D" uid="uid://k67rsnitoltq" path="res://Recursos/Enemies/murcielago-Sheet-110x54.png" id="2_7q0mi"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_p6qpr"]
+atlas = ExtResource("2_7q0mi")
+region = Rect2(0, 0, 54, 54)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_68j3f"]
+atlas = ExtResource("2_7q0mi")
+region = Rect2(56, 0, 54, 54)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_c5wld"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_p6qpr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_68j3f")
+}],
+"loop": true,
+"name": &"fly",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8pyey"]
+size = Vector2(53, 26)
+
+[sub_resource type="Animation" id="Animation_ir2ea"]
+resource_name = "fly"
+length = 6.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1.5, 3, 4.5, 6),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(200, 0), Vector2(0, 0), Vector2(-200, 0), Vector2(0, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:flip_h")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1.5, 4.5),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [false, true, false]
+}
+
+[sub_resource type="Animation" id="Animation_otons"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(110, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:flip_h")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_f4jg2"]
+_data = {
+"RESET": SubResource("Animation_otons"),
+"fly": SubResource("Animation_ir2ea")
+}
+
+[node name="murcielago" type="AnimatedSprite2D"]
+texture_filter = 1
+position = Vector2(110, 0)
+sprite_frames = SubResource("SpriteFrames_c5wld")
+animation = &"fly"
+frame_progress = 0.764327
+speed_scale = 2.0
+flip_h = true
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(0.5, -2)
+shape = SubResource("RectangleShape2D_8pyey")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+speed_scale = 1.5
+libraries = {
+"": SubResource("AnimationLibrary_f4jg2")
+}

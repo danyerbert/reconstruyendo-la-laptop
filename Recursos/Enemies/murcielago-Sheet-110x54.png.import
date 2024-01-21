@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://d38x68nb731ah"
-path="res://.godot/imported/3er nivel montaña.jpg-05db9724e7a3be20202bda8b7dea3e1f.ctex"
+uid="uid://k67rsnitoltq"
+path="res://.godot/imported/murcielago-Sheet-110x54.png-0b50b5f77fc8c3f8016fc53736818690.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Recursos/Fondos/montañas/3er nivel montaña.jpg"
-dest_files=["res://.godot/imported/3er nivel montaña.jpg-05db9724e7a3be20202bda8b7dea3e1f.ctex"]
+source_file="res://Recursos/Enemies/murcielago-Sheet-110x54.png"
+dest_files=["res://.godot/imported/murcielago-Sheet-110x54.png-0b50b5f77fc8c3f8016fc53736818690.ctex"]
 
 [params]
 

@@ -72,14 +72,16 @@ texture_filter = 1
 sprite_frames = SubResource("SpriteFrames_gk41o")
 animation = &"nadar"
 autoplay = "nadar"
-frame_progress = 0.419841
+frame_progress = 0.329224
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, 16)
+position = Vector2(0, 31)
 shape = SubResource("CircleShape2D_jytdt")
 
 [node name="HazardArea" parent="." instance=ExtResource("2_d2v8p")]
 position = Vector2(0, 16)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="HazardArea"]
+visible = false
+position = Vector2(-1, 17)
 shape = SubResource("CircleShape2D_n5fpy")

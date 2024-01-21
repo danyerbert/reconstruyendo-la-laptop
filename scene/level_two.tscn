@@ -3,7 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://bvrxnaqhvdn30" path="res://scene/world.tscn" id="1_1ymdc"]
 [ext_resource type="PackedScene" uid="uid://d3712ev3kfuq2" path="res://scene/level_tree.tscn" id="2_j7gyk"]
 [ext_resource type="PackedScene" uid="uid://bgcdbavvuop6f" path="res://scene/level_tile_map.tscn" id="2_lxdub"]
-[ext_resource type="Texture2D" uid="uid://dkdpxrlm3feew" path="res://Recursos/Fondos/Islas/3er nivel islas  NE.jpg" id="3_iqyo4"]
+[ext_resource type="Texture2D" uid="uid://ccjsqnxo6nc47" path="res://Recursos/Fondos/Islas/fondo_playa_noche.png" id="3_5qdcm"]
 [ext_resource type="PackedScene" uid="uid://ddrjfl6lk7mw3" path="res://scene/caracol.tscn" id="5_gkjx7"]
 [ext_resource type="PackedScene" uid="uid://bt3hu6x3gu6hy" path="res://scene/mapeado/agua.tscn" id="5_vi608"]
 [ext_resource type="PackedScene" uid="uid://b3ktv55xck8xw" path="res://scene/piraña.tscn" id="7_6pmfk"]
@@ -18,14 +18,15 @@ next_level = ExtResource("2_j7gyk")
 [node name="fondo" type="Node2D" parent="." index="0"]
 
 [node name="Sprite2D" type="Sprite2D" parent="fondo" index="0"]
-position = Vector2(783.5, 323)
-scale = Vector2(1.284, 1.324)
-texture = ExtResource("3_iqyo4")
+position = Vector2(927.243, 429.15)
+scale = Vector2(0.637287, 0.540375)
+texture = ExtResource("3_5qdcm")
 
 [node name="Sprite2D2" type="Sprite2D" parent="fondo" index="1"]
-position = Vector2(2405, 322)
-scale = Vector2(1.32, 1.32)
-texture = ExtResource("3_iqyo4")
+position = Vector2(2976, 429)
+scale = Vector2(0.637287, 0.540375)
+texture = ExtResource("3_5qdcm")
+flip_h = true
 
 [node name="Player" parent="." index="1"]
 position = Vector2(44, 609)
@@ -269,5 +270,5 @@ scale = Vector2(0.5, 0.5)
 
 [node name="AudioStreamPlayer" parent="." index="80"]
 stream = ExtResource("11_f5r5d")
-volume_db = -10.0
+volume_db = -20.0
 autoplay = true

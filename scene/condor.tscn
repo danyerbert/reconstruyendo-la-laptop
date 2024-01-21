@@ -1,0 +1,40 @@
+[gd_scene load_steps=6 format=3 uid="uid://bh6gjmgkapdn2"]
+
+[ext_resource type="Texture2D" uid="uid://csyvrsor63xsf" path="res://Recursos/Enemies/condor-sheet-110x54.png" id="1_q50hw"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qptvu"]
+atlas = ExtResource("1_q50hw")
+region = Rect2(0, 0, 54, 54)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nqm6w"]
+atlas = ExtResource("1_q50hw")
+region = Rect2(55, 0, 54, 54)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_c5wld"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qptvu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nqm6w")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3kqrd"]
+size = Vector2(49, 49)
+
+[node name="condor" type="AnimatedSprite2D"]
+sprite_frames = SubResource("SpriteFrames_c5wld")
+frame_progress = 0.233302
+speed_scale = 1.5
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+visible = false
+position = Vector2(-2.5, -2.5)
+shape = SubResource("RectangleShape2D_3kqrd")

@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://bvrxnaqhvdn30" path="res://scene/world.tscn" id="1_hqukn"]
 [ext_resource type="PackedScene" uid="uid://bgcdbavvuop6f" path="res://scene/level_tile_map.tscn" id="2_cdsno"]
-[ext_resource type="Texture2D" uid="uid://clgcp1u0fouyu" path="res://Recursos/Fondos/desierto/1er nivel  fondo decirto.jpg" id="2_il0to"]
+[ext_resource type="Texture2D" uid="uid://6t7dfck0r8im" path="res://Recursos/Fondos/desierto/fondo_desierto.png" id="2_e04w7"]
 [ext_resource type="Texture2D" uid="uid://dsgtyagv26c48" path="res://Recursos/Object/cloud_platforms.png" id="3_iffw2"]
 [ext_resource type="Texture2D" uid="uid://d4cr11gwnxegp" path="res://Recursos/Tilesets/tileset_desert.png" id="4_yufb7"]
 [ext_resource type="Texture2D" uid="uid://5d2qgpu078sj" path="res://Recursos/Object/water_b_5 frames.png" id="5_1xdjg"]
@@ -399,14 +399,19 @@ sources/3 = SubResource("TileSetAtlasSource_im4xl")
 [node name="fondo" type="Node2D" parent="." index="0"]
 
 [node name="Sprite2D" type="Sprite2D" parent="fondo" index="0"]
-position = Vector2(634.281, 327.5)
-scale = Vector2(0.311771, 0.272917)
-texture = ExtResource("2_il0to")
+position = Vector2(420.057, 436.535)
+scale = Vector2(0.951886, 0.638592)
+texture = ExtResource("2_e04w7")
 
 [node name="Sprite2D2" type="Sprite2D" parent="fondo" index="1"]
-position = Vector2(1864.31, 327.25)
-scale = Vector2(0.276042, 0.272708)
-texture = ExtResource("2_il0to")
+position = Vector2(1370, 436.535)
+scale = Vector2(0.951886, 0.638592)
+texture = ExtResource("2_e04w7")
+
+[node name="Sprite2D3" type="Sprite2D" parent="fondo" index="2"]
+position = Vector2(2321, 436.535)
+scale = Vector2(0.951886, 0.638592)
+texture = ExtResource("2_e04w7")
 
 [node name="Player" parent="." index="1"]
 position = Vector2(27, 631)
@@ -564,5 +569,5 @@ scale = Vector2(0.5, 0.5)
 
 [node name="AudioStreamPlayer" parent="." index="52"]
 stream = ExtResource("12_hsqnd")
-volume_db = -10.0
+volume_db = -20.0
 autoplay = true

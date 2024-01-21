@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bhqbelxhvmgvt"
-path="res://.godot/imported/1en nivel islas NE.jpg-82effaf21b8c5db1f250a79937bc75c7.ctex"
+uid="uid://b8d2yttv03j5c"
+path="res://.godot/imported/puma grande-Sheetl.png-79f7929042dfd4a4c449509813890bf9.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Recursos/Fondos/Islas/1en nivel islas NE.jpg"
-dest_files=["res://.godot/imported/1en nivel islas NE.jpg-82effaf21b8c5db1f250a79937bc75c7.ctex"]
+source_file="res://Recursos/Enemies/puma grande-Sheetl.png"
+dest_files=["res://.godot/imported/puma grande-Sheetl.png-79f7929042dfd4a4c449509813890bf9.ctex"]
 
 [params]
 
