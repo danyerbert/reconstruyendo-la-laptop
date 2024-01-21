@@ -1,12 +1,14 @@
-[gd_scene load_steps=4 format=3 uid="uid://fj0jrrjojjxa"]
+[gd_scene load_steps=5 format=3 uid="uid://fj0jrrjojjxa"]
 
 [ext_resource type="Texture2D" uid="uid://b17534plwoiqe" path="res://Recursos/Enemies/wood_stakes.png" id="1_ex56q"]
+[ext_resource type="Script" path="res://scripts/spikes.gd" id="1_j50w2"]
 [ext_resource type="PackedScene" uid="uid://d31qnbhswewet" path="res://scene/hazard_area.tscn" id="2_phm53"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8pctq"]
 size = Vector2(32, 20)
 
 [node name="Spikes" type="Node2D"]
+script = ExtResource("1_j50w2")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture_filter = 1
