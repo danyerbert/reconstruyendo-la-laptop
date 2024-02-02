@@ -1,7 +1,43 @@
-[gd_scene load_steps=4 format=3 uid="uid://dofghashr6lju"]
+[gd_scene load_steps=9 format=3 uid="uid://dofghashr6lju"]
 
 [ext_resource type="Script" path="res://scripts/memoria_ram.gd" id="1_5da5h"]
-[ext_resource type="Texture2D" uid="uid://dg2sa5xmcoffd" path="res://Recursos/Partes y piezas/memoria ram.png" id="1_c3wb4"]
+[ext_resource type="Texture2D" uid="uid://dopm241oslqm" path="res://Recursos/Partes y piezas/memoria ram irando-Sheet.png" id="2_m244w"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_avt5c"]
+atlas = ExtResource("2_m244w")
+region = Rect2(0, 0, 60, 60)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5x2d2"]
+atlas = ExtResource("2_m244w")
+region = Rect2(60, 0, 60, 60)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ti4n6"]
+atlas = ExtResource("2_m244w")
+region = Rect2(120, 0, 60, 60)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qwh46"]
+atlas = ExtResource("2_m244w")
+region = Rect2(180, 0, 60, 60)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_k0dgx"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_avt5c")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5x2d2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ti4n6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qwh46")
+}],
+"loop": true,
+"name": &"animation",
+"speed": 2.0
+}]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_vqmhm"]
 size = Vector2(46, 20)
@@ -11,9 +47,12 @@ collision_layer = 0
 collision_mask = 2
 script = ExtResource("1_5da5h")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
+[node name="Sprite2D" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
-texture = ExtResource("1_c3wb4")
+sprite_frames = SubResource("SpriteFrames_k0dgx")
+animation = &"animation"
+autoplay = "animation"
+frame_progress = 0.819867
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(-1, 4)

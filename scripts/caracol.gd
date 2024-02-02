@@ -19,3 +19,8 @@ func _physics_process(_delta):
 		$AnimatedSprite2D.flip_h = true
 	
 	move_and_slide()
+
+
+func _on_area_2d_body_entered(body):
+	if body.is_in_group("jugador"):
+		body.hit()

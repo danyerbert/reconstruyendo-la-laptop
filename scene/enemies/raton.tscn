@@ -1,0 +1,68 @@
+[gd_scene load_steps=10 format=3 uid="uid://cjf23tq3deb4s"]
+
+[ext_resource type="Texture2D" uid="uid://xhg7p5h6d18r" path="res://Recursos/Enemies/bear_brown.png" id="1_8hmbj"]
+[ext_resource type="Script" path="res://scripts/enemies/raton.gd" id="1_kbam8"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nnck0"]
+atlas = ExtResource("1_8hmbj")
+region = Rect2(0, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jrfq3"]
+atlas = ExtResource("1_8hmbj")
+region = Rect2(32, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vntuv"]
+atlas = ExtResource("1_8hmbj")
+region = Rect2(64, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ptvav"]
+atlas = ExtResource("1_8hmbj")
+region = Rect2(96, 32, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_say7y"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nnck0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jrfq3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vntuv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ptvav")
+}],
+"loop": true,
+"name": &"run",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_n5pu6"]
+size = Vector2(24, 5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fvdan"]
+size = Vector2(24, 20)
+
+[node name="raton" type="CharacterBody2D"]
+script = ExtResource("1_kbam8")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+sprite_frames = SubResource("SpriteFrames_say7y")
+animation = &"run"
+frame_progress = 0.827018
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 13.5)
+shape = SubResource("RectangleShape2D_n5pu6")
+
+[node name="Area2D" type="Area2D" parent="."]
+collision_mask = 3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(0, 6)
+shape = SubResource("RectangleShape2D_fvdan")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

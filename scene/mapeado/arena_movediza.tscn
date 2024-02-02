@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3 uid="uid://c5pmml8jr347b"]
+
+[ext_resource type="Texture2D" uid="uid://devuckx67rv7i" path="res://Recursos/Object/decierto.png" id="1_2lbbu"]
+[ext_resource type="Script" path="res://scripts/mapeado/arena_movediza.gd" id="1_df0ry"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7ufv8"]
+size = Vector2(187, 28)
+
+[node name="arenaMovediza" type="Area2D"]
+collision_mask = 3
+script = ExtResource("1_df0ry")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(43, 6.45)
+scale = Vector2(1.86, 1.86)
+texture = ExtResource("1_2lbbu")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(42.5, 7)
+shape = SubResource("RectangleShape2D_7ufv8")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

@@ -1,0 +1,18 @@
+[gd_scene load_steps=5 format=3 uid="uid://l7stmr4upxs0"]
+
+[ext_resource type="PackedScene" uid="uid://bvrxnaqhvdn30" path="res://scene/world.tscn" id="1_7hfam"]
+[ext_resource type="PackedScene" uid="uid://bgcdbavvuop6f" path="res://scene/level_tile_map.tscn" id="2_d5wy4"]
+[ext_resource type="PackedScene" uid="uid://d0oasja0u0f3g" path="res://scene/enemies/captus.tscn" id="3_rscgd"]
+[ext_resource type="PackedScene" uid="uid://clcwhvkesynao" path="res://scene/enemies/pinchos.tscn" id="4_juska"]
+
+[node name="World" instance=ExtResource("1_7hfam")]
+
+[node name="LevelTileMap" parent="." index="4" instance=ExtResource("2_d5wy4")]
+position = Vector2(333, 526)
+layer_0/tile_data = PackedInt32Array(393196, 131072, 1, 393197, 196608, 1, 393198, 262144, 1, 393199, 131072, 1, 393204, 262144, 1, 393205, 327680, 1, 393206, 262144, 1, 393207, 131072, 1, 393213, 327680, 1, 393214, 196608, 1, 393215, 262144, 1, 327680, 327680, 1, 327685, 131072, 1, 327686, 196608, 1, 327687, 262144, 1, 327688, 327680, 1, 327681, 131072, 1, 327682, 196608, 1, 327683, 262144, 1, 327684, 327680, 1, 393210, 327680, 1, 393211, 196608, 1, 393212, 262144, 1, 393208, 196608, 1, 393209, 262144, 1, 393202, 327680, 1, 393203, 196608, 1, 393200, 196608, 1, 393201, 262144, 1, 327689, 131072, 1, 327690, 196608, 1, 327691, 262144, 1, 327692, 327680, 1, 327693, 131072, 1, 327694, 196608, 1, 327695, 262144, 1, 327696, 131072, 1, 327698, 262144, 1, 327699, 327680, 1, 327700, 262144, 1, 327701, 327680, 1, 327697, 196608, 1)
+
+[node name="captus" parent="." index="5" instance=ExtResource("3_rscgd")]
+position = Vector2(309, 589)
+
+[node name="pinchos" parent="." index="6" instance=ExtResource("4_juska")]
+position = Vector2(431, 588)

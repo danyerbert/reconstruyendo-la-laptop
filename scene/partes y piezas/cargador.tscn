@@ -1,7 +1,43 @@
-[gd_scene load_steps=4 format=3 uid="uid://car3ajkly1to8"]
+[gd_scene load_steps=9 format=3 uid="uid://car3ajkly1to8"]
 
-[ext_resource type="Texture2D" uid="uid://n5p673i3xh5j" path="res://Recursos/Partes y piezas/cargador.png" id="1_q0uq8"]
 [ext_resource type="Script" path="res://scripts/cargador.gd" id="1_uy5dr"]
+[ext_resource type="Texture2D" uid="uid://bsrtkoxsw717s" path="res://Recursos/Partes y piezas/cargadorani-Sheet.png" id="2_7tfod"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ntrkr"]
+atlas = ExtResource("2_7tfod")
+region = Rect2(0, 0, 30, 30)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2a787"]
+atlas = ExtResource("2_7tfod")
+region = Rect2(30, 0, 30, 30)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_28171"]
+atlas = ExtResource("2_7tfod")
+region = Rect2(60, 0, 30, 30)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3wjdv"]
+atlas = ExtResource("2_7tfod")
+region = Rect2(90, 0, 30, 30)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_gccum"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ntrkr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2a787")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_28171")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3wjdv")
+}],
+"loop": true,
+"name": &"animation",
+"speed": 5.0
+}]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_x3dbc"]
 size = Vector2(23, 28)
@@ -11,9 +47,12 @@ collision_layer = 0
 collision_mask = 2
 script = ExtResource("1_uy5dr")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
+[node name="animation" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
-texture = ExtResource("1_q0uq8")
+sprite_frames = SubResource("SpriteFrames_gccum")
+animation = &"animation"
+autoplay = "animation"
+frame_progress = 0.827512
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(-2.5, 1)

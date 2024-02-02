@@ -1,0 +1,55 @@
+[gd_scene load_steps=6 format=3 uid="uid://lr4vonnst7vn"]
+
+[ext_resource type="Texture2D" uid="uid://lw6mohbm1fee" path="res://Recursos/Partes y piezas/textos/tarjeta madre-Sheet.png" id="1_6a4hh"]
+[ext_resource type="Script" path="res://scripts/textos/texto_tarjeta.gd" id="1_woga1"]
+
+[sub_resource type="Animation" id="Animation_wyi4e"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
+[sub_resource type="Animation" id="Animation_q5wum"]
+resource_name = "mostrar"
+length = 5.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1.7, 3.7),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [0, 1, 2]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_0ahki"]
+_data = {
+"RESET": SubResource("Animation_wyi4e"),
+"mostrar": SubResource("Animation_q5wum")
+}
+
+[node name="textoTarjeta" type="CanvasLayer"]
+visible = false
+script = ExtResource("1_woga1")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(528, 326)
+texture = ExtResource("1_6a4hh")
+hframes = 3
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_0ahki")
+}

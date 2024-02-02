@@ -1,7 +1,43 @@
-[gd_scene load_steps=4 format=3 uid="uid://dachjnwx0dsx0"]
+[gd_scene load_steps=9 format=3 uid="uid://dachjnwx0dsx0"]
 
-[ext_resource type="Texture2D" uid="uid://dt5sd4tyuykrw" path="res://Recursos/Partes y piezas/disco duro.png" id="1_d0t2i"]
 [ext_resource type="Script" path="res://scene/partes y piezas/disco_duro.gd" id="1_wvvyq"]
+[ext_resource type="Texture2D" uid="uid://cdnvvewsfu7dl" path="res://Recursos/Partes y piezas/disco durogiro-Sheet.png" id="2_uvaxa"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nkshh"]
+atlas = ExtResource("2_uvaxa")
+region = Rect2(0, 0, 60, 60)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_aunhg"]
+atlas = ExtResource("2_uvaxa")
+region = Rect2(60, 0, 60, 60)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_smsnd"]
+atlas = ExtResource("2_uvaxa")
+region = Rect2(120, 0, 60, 60)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_chnos"]
+atlas = ExtResource("2_uvaxa")
+region = Rect2(180, 0, 60, 60)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_acmot"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nkshh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_aunhg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_smsnd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_chnos")
+}],
+"loop": true,
+"name": &"animation",
+"speed": 2.0
+}]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_li25c"]
 size = Vector2(33, 44)
@@ -11,9 +47,12 @@ collision_layer = 0
 collision_mask = 2
 script = ExtResource("1_wvvyq")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
+[node name="Sprite2D" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
-texture = ExtResource("1_d0t2i")
+sprite_frames = SubResource("SpriteFrames_acmot")
+animation = &"animation"
+autoplay = "animation"
+frame_progress = 0.243124
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0.5, -1)

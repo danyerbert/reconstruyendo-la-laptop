@@ -54,10 +54,9 @@ animations = [{
 }]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_2jwmd"]
-radius = 12.0416
+radius = 5.83095
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_ox051"]
-radius = 21.1896
 
 [node name="pez" type="CharacterBody2D"]
 
@@ -66,15 +65,15 @@ texture_filter = 1
 sprite_frames = SubResource("SpriteFrames_hrc3w")
 animation = &"jump"
 autoplay = "jump"
-frame_progress = 0.044257
+frame = 5
+frame_progress = 0.493459
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, 19)
+position = Vector2(16, 16)
 shape = SubResource("CircleShape2D_2jwmd")
 
 [node name="HazardArea" parent="." instance=ExtResource("1_tuwqr")]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="HazardArea"]
-visible = false
-position = Vector2(-1, 22)
+position = Vector2(16, 16)
 shape = SubResource("CircleShape2D_ox051")

@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://clcwhvkesynao"]
+
+[ext_resource type="Texture2D" uid="uid://b17534plwoiqe" path="res://Recursos/Enemies/wood_stakes.png" id="1_e6gae"]
+[ext_resource type="Script" path="res://scripts/pinchos.gd" id="1_njhm0"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jn1ih"]
+size = Vector2(32, 19.5)
+
+[node name="pinchos" type="Area2D"]
+collision_mask = 3
+script = ExtResource("1_njhm0")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+texture = ExtResource("1_e6gae")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 6.75)
+shape = SubResource("RectangleShape2D_jn1ih")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

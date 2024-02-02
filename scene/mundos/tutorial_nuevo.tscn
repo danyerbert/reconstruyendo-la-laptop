@@ -1,0 +1,1024 @@
+[gd_scene load_steps=13 format=3 uid="uid://w3ltt6nltouu"]
+
+[ext_resource type="PackedScene" uid="uid://bvrxnaqhvdn30" path="res://scene/world.tscn" id="1_14mby"]
+[ext_resource type="PackedScene" uid="uid://bacagclxrwxlc" path="res://scene/mundos/nivel islas/pimer_nivel_islas.tscn" id="2_e5r0h"]
+[ext_resource type="Texture2D" uid="uid://b0xygrbro0jqh" path="res://Recursos/Fondos/Nuevos Fondos/Islas/1playa nueva.jpg" id="2_pe02b"]
+[ext_resource type="Texture2D" uid="uid://dcc7qsqxkchft" path="res://Recursos/Fondos/Nuevos Fondos/Islas/2 playa nueva.jpg" id="3_2ojtu"]
+[ext_resource type="PackedScene" uid="uid://bgcdbavvuop6f" path="res://scene/level_tile_map.tscn" id="3_3bwj1"]
+[ext_resource type="PackedScene" uid="uid://bt3hu6x3gu6hy" path="res://scene/mapeado/agua.tscn" id="3_ofmyh"]
+[ext_resource type="PackedScene" uid="uid://dvh4idui0336s" path="res://scene/enemies/pez.tscn" id="5_8s32i"]
+[ext_resource type="Texture2D" uid="uid://nk83hi2lu4cw" path="res://Recursos/Object/teclas.png" id="5_cek5b"]
+[ext_resource type="PackedScene" uid="uid://ddrjfl6lk7mw3" path="res://scene/caracol.tscn" id="6_d1y2g"]
+[ext_resource type="PackedScene" uid="uid://blwq6xc3lyj2d" path="res://scene/herramienta.tscn" id="7_24xqa"]
+[ext_resource type="PackedScene" uid="uid://bojrahfg2tfjs" path="res://scene/destonillador.tscn" id="7_fhw2x"]
+[ext_resource type="Texture2D" uid="uid://bjqp5nmsi0ho8" path="res://Recursos/Object/teclas2.png" id="11_ygiyn"]
+
+[node name="World" instance=ExtResource("1_14mby")]
+next_level = ExtResource("2_e5r0h")
+
+[node name="fondos" type="Node2D" parent="." index="0"]
+
+[node name="fondo" type="Sprite2D" parent="fondos" index="0"]
+position = Vector2(590, 327)
+scale = Vector2(1.07656, 1.07656)
+texture = ExtResource("2_pe02b")
+
+[node name="fondo2" type="Sprite2D" parent="fondos" index="1"]
+position = Vector2(1747, 327)
+scale = Vector2(1.0125, 1.07656)
+texture = ExtResource("3_2ojtu")
+
+[node name="fondo3" type="Sprite2D" parent="fondos" index="2"]
+position = Vector2(2906, 327)
+scale = Vector2(1.07656, 1.07656)
+texture = ExtResource("2_pe02b")
+
+[node name="fondo4" type="Sprite2D" parent="fondos" index="3"]
+position = Vector2(4050, 327)
+scale = Vector2(1.0125, 1.07656)
+texture = ExtResource("3_2ojtu")
+
+[node name="fondo5" type="Sprite2D" parent="fondos" index="4"]
+position = Vector2(5187, 327)
+scale = Vector2(1.07656, 1.07656)
+texture = ExtResource("2_pe02b")
+
+[node name="fondo6" type="Sprite2D" parent="fondos" index="5"]
+position = Vector2(6347, 327)
+scale = Vector2(1.0125, 1.07656)
+texture = ExtResource("3_2ojtu")
+
+[node name="mapeado" type="Node2D" parent="." index="1"]
+
+[node name="agua" parent="mapeado" index="0" instance=ExtResource("3_ofmyh")]
+position = Vector2(554, 641)
+
+[node name="agua2" parent="mapeado" index="1" instance=ExtResource("3_ofmyh")]
+position = Vector2(608, 641)
+
+[node name="agua3" parent="mapeado" index="2" instance=ExtResource("3_ofmyh")]
+position = Vector2(767, 640)
+
+[node name="agua4" parent="mapeado" index="3" instance=ExtResource("3_ofmyh")]
+position = Vector2(820, 640)
+
+[node name="agua5" parent="mapeado" index="4" instance=ExtResource("3_ofmyh")]
+position = Vector2(966, 640)
+
+[node name="agua6" parent="mapeado" index="5" instance=ExtResource("3_ofmyh")]
+position = Vector2(1021, 640)
+
+[node name="agua7" parent="mapeado" index="6" instance=ExtResource("3_ofmyh")]
+position = Vector2(1084, 640)
+
+[node name="agua8" parent="mapeado" index="7" instance=ExtResource("3_ofmyh")]
+position = Vector2(1147, 640)
+
+[node name="agua9" parent="mapeado" index="8" instance=ExtResource("3_ofmyh")]
+position = Vector2(1187, 640)
+
+[node name="agua10" parent="mapeado" index="9" instance=ExtResource("3_ofmyh")]
+position = Vector2(1227, 640)
+
+[node name="agua11" parent="mapeado" index="10" instance=ExtResource("3_ofmyh")]
+position = Vector2(1267, 640)
+
+[node name="agua12" parent="mapeado" index="11" instance=ExtResource("3_ofmyh")]
+position = Vector2(1307, 640)
+
+[node name="agua13" parent="mapeado" index="12" instance=ExtResource("3_ofmyh")]
+position = Vector2(1347, 640)
+
+[node name="agua14" parent="mapeado" index="13" instance=ExtResource("3_ofmyh")]
+position = Vector2(1387, 640)
+
+[node name="agua15" parent="mapeado" index="14" instance=ExtResource("3_ofmyh")]
+position = Vector2(1427, 640)
+
+[node name="agua16" parent="mapeado" index="15" instance=ExtResource("3_ofmyh")]
+position = Vector2(1467, 640)
+
+[node name="agua17" parent="mapeado" index="16" instance=ExtResource("3_ofmyh")]
+position = Vector2(1507, 640)
+
+[node name="agua18" parent="mapeado" index="17" instance=ExtResource("3_ofmyh")]
+position = Vector2(1547, 640)
+
+[node name="agua19" parent="mapeado" index="18" instance=ExtResource("3_ofmyh")]
+position = Vector2(1587, 640)
+
+[node name="agua20" parent="mapeado" index="19" instance=ExtResource("3_ofmyh")]
+position = Vector2(1627, 640)
+
+[node name="agua21" parent="mapeado" index="20" instance=ExtResource("3_ofmyh")]
+position = Vector2(1667, 640)
+
+[node name="agua22" parent="mapeado" index="21" instance=ExtResource("3_ofmyh")]
+position = Vector2(1707, 640)
+
+[node name="agua23" parent="mapeado" index="22" instance=ExtResource("3_ofmyh")]
+position = Vector2(1747, 640)
+
+[node name="agua24" parent="mapeado" index="23" instance=ExtResource("3_ofmyh")]
+position = Vector2(1787, 640)
+
+[node name="agua25" parent="mapeado" index="24" instance=ExtResource("3_ofmyh")]
+position = Vector2(1827, 640)
+
+[node name="agua26" parent="mapeado" index="25" instance=ExtResource("3_ofmyh")]
+position = Vector2(1867, 640)
+
+[node name="agua27" parent="mapeado" index="26" instance=ExtResource("3_ofmyh")]
+position = Vector2(1907, 640)
+
+[node name="agua28" parent="mapeado" index="27" instance=ExtResource("3_ofmyh")]
+position = Vector2(1947, 640)
+
+[node name="agua29" parent="mapeado" index="28" instance=ExtResource("3_ofmyh")]
+position = Vector2(1987, 640)
+
+[node name="agua30" parent="mapeado" index="29" instance=ExtResource("3_ofmyh")]
+position = Vector2(2027, 640)
+
+[node name="agua31" parent="mapeado" index="30" instance=ExtResource("3_ofmyh")]
+position = Vector2(2067, 640)
+
+[node name="agua32" parent="mapeado" index="31" instance=ExtResource("3_ofmyh")]
+position = Vector2(2107, 640)
+
+[node name="agua33" parent="mapeado" index="32" instance=ExtResource("3_ofmyh")]
+position = Vector2(2147, 640)
+
+[node name="agua34" parent="mapeado" index="33" instance=ExtResource("3_ofmyh")]
+position = Vector2(2187, 640)
+
+[node name="agua35" parent="mapeado" index="34" instance=ExtResource("3_ofmyh")]
+position = Vector2(2227, 640)
+
+[node name="agua36" parent="mapeado" index="35" instance=ExtResource("3_ofmyh")]
+position = Vector2(2267, 640)
+
+[node name="agua37" parent="mapeado" index="36" instance=ExtResource("3_ofmyh")]
+position = Vector2(2307, 640)
+
+[node name="agua38" parent="mapeado" index="37" instance=ExtResource("3_ofmyh")]
+position = Vector2(2347, 640)
+
+[node name="agua39" parent="mapeado" index="38" instance=ExtResource("3_ofmyh")]
+position = Vector2(2387, 640)
+
+[node name="agua40" parent="mapeado" index="39" instance=ExtResource("3_ofmyh")]
+position = Vector2(2427, 640)
+
+[node name="agua41" parent="mapeado" index="40" instance=ExtResource("3_ofmyh")]
+position = Vector2(2467, 640)
+
+[node name="agua42" parent="mapeado" index="41" instance=ExtResource("3_ofmyh")]
+position = Vector2(2507, 640)
+
+[node name="agua43" parent="mapeado" index="42" instance=ExtResource("3_ofmyh")]
+position = Vector2(2547, 640)
+
+[node name="agua44" parent="mapeado" index="43" instance=ExtResource("3_ofmyh")]
+position = Vector2(2587, 640)
+
+[node name="agua45" parent="mapeado" index="44" instance=ExtResource("3_ofmyh")]
+position = Vector2(2627, 640)
+
+[node name="agua46" parent="mapeado" index="45" instance=ExtResource("3_ofmyh")]
+position = Vector2(2667, 640)
+
+[node name="agua47" parent="mapeado" index="46" instance=ExtResource("3_ofmyh")]
+position = Vector2(2707, 640)
+
+[node name="agua48" parent="mapeado" index="47" instance=ExtResource("3_ofmyh")]
+position = Vector2(2747, 640)
+
+[node name="agua49" parent="mapeado" index="48" instance=ExtResource("3_ofmyh")]
+position = Vector2(2787, 640)
+
+[node name="agua50" parent="mapeado" index="49" instance=ExtResource("3_ofmyh")]
+position = Vector2(2827, 640)
+
+[node name="agua51" parent="mapeado" index="50" instance=ExtResource("3_ofmyh")]
+position = Vector2(2867, 640)
+
+[node name="agua52" parent="mapeado" index="51" instance=ExtResource("3_ofmyh")]
+position = Vector2(2907, 640)
+
+[node name="agua53" parent="mapeado" index="52" instance=ExtResource("3_ofmyh")]
+position = Vector2(2947, 640)
+
+[node name="agua54" parent="mapeado" index="53" instance=ExtResource("3_ofmyh")]
+position = Vector2(2987, 640)
+
+[node name="agua55" parent="mapeado" index="54" instance=ExtResource("3_ofmyh")]
+position = Vector2(3027, 640)
+
+[node name="agua56" parent="mapeado" index="55" instance=ExtResource("3_ofmyh")]
+position = Vector2(3067, 640)
+
+[node name="agua57" parent="mapeado" index="56" instance=ExtResource("3_ofmyh")]
+position = Vector2(3107, 640)
+
+[node name="agua58" parent="mapeado" index="57" instance=ExtResource("3_ofmyh")]
+position = Vector2(3147, 640)
+
+[node name="agua59" parent="mapeado" index="58" instance=ExtResource("3_ofmyh")]
+position = Vector2(3187, 640)
+
+[node name="agua60" parent="mapeado" index="59" instance=ExtResource("3_ofmyh")]
+position = Vector2(3227, 640)
+
+[node name="agua61" parent="mapeado" index="60" instance=ExtResource("3_ofmyh")]
+position = Vector2(3267, 640)
+
+[node name="agua62" parent="mapeado" index="61" instance=ExtResource("3_ofmyh")]
+position = Vector2(3307, 640)
+
+[node name="agua63" parent="mapeado" index="62" instance=ExtResource("3_ofmyh")]
+position = Vector2(3347, 640)
+
+[node name="agua64" parent="mapeado" index="63" instance=ExtResource("3_ofmyh")]
+position = Vector2(3387, 640)
+
+[node name="agua65" parent="mapeado" index="64" instance=ExtResource("3_ofmyh")]
+position = Vector2(3427, 640)
+
+[node name="agua66" parent="mapeado" index="65" instance=ExtResource("3_ofmyh")]
+position = Vector2(3467, 640)
+
+[node name="agua67" parent="mapeado" index="66" instance=ExtResource("3_ofmyh")]
+position = Vector2(3507, 640)
+
+[node name="agua68" parent="mapeado" index="67" instance=ExtResource("3_ofmyh")]
+position = Vector2(3547, 640)
+
+[node name="agua69" parent="mapeado" index="68" instance=ExtResource("3_ofmyh")]
+position = Vector2(3587, 640)
+
+[node name="agua70" parent="mapeado" index="69" instance=ExtResource("3_ofmyh")]
+position = Vector2(3627, 640)
+
+[node name="agua71" parent="mapeado" index="70" instance=ExtResource("3_ofmyh")]
+position = Vector2(3667, 640)
+
+[node name="agua72" parent="mapeado" index="71" instance=ExtResource("3_ofmyh")]
+position = Vector2(3707, 640)
+
+[node name="agua73" parent="mapeado" index="72" instance=ExtResource("3_ofmyh")]
+position = Vector2(3747, 640)
+
+[node name="agua74" parent="mapeado" index="73" instance=ExtResource("3_ofmyh")]
+position = Vector2(3787, 640)
+
+[node name="agua75" parent="mapeado" index="74" instance=ExtResource("3_ofmyh")]
+position = Vector2(3827, 640)
+
+[node name="agua76" parent="mapeado" index="75" instance=ExtResource("3_ofmyh")]
+position = Vector2(3867, 640)
+
+[node name="agua77" parent="mapeado" index="76" instance=ExtResource("3_ofmyh")]
+position = Vector2(3907, 640)
+
+[node name="agua78" parent="mapeado" index="77" instance=ExtResource("3_ofmyh")]
+position = Vector2(3947, 640)
+
+[node name="agua79" parent="mapeado" index="78" instance=ExtResource("3_ofmyh")]
+position = Vector2(3987, 640)
+
+[node name="agua80" parent="mapeado" index="79" instance=ExtResource("3_ofmyh")]
+position = Vector2(4027, 640)
+
+[node name="agua81" parent="mapeado" index="80" instance=ExtResource("3_ofmyh")]
+position = Vector2(4067, 640)
+
+[node name="agua82" parent="mapeado" index="81" instance=ExtResource("3_ofmyh")]
+position = Vector2(4107, 640)
+
+[node name="agua83" parent="mapeado" index="82" instance=ExtResource("3_ofmyh")]
+position = Vector2(4147, 640)
+
+[node name="agua84" parent="mapeado" index="83" instance=ExtResource("3_ofmyh")]
+position = Vector2(4187, 640)
+
+[node name="agua85" parent="mapeado" index="84" instance=ExtResource("3_ofmyh")]
+position = Vector2(4227, 640)
+
+[node name="agua86" parent="mapeado" index="85" instance=ExtResource("3_ofmyh")]
+position = Vector2(4267, 640)
+
+[node name="agua87" parent="mapeado" index="86" instance=ExtResource("3_ofmyh")]
+position = Vector2(4307, 640)
+
+[node name="agua88" parent="mapeado" index="87" instance=ExtResource("3_ofmyh")]
+position = Vector2(4347, 640)
+
+[node name="agua89" parent="mapeado" index="88" instance=ExtResource("3_ofmyh")]
+position = Vector2(4387, 640)
+
+[node name="agua90" parent="mapeado" index="89" instance=ExtResource("3_ofmyh")]
+position = Vector2(4427, 640)
+
+[node name="agua91" parent="mapeado" index="90" instance=ExtResource("3_ofmyh")]
+position = Vector2(4467, 640)
+
+[node name="agua92" parent="mapeado" index="91" instance=ExtResource("3_ofmyh")]
+position = Vector2(4507, 640)
+
+[node name="agua93" parent="mapeado" index="92" instance=ExtResource("3_ofmyh")]
+position = Vector2(4547, 640)
+
+[node name="agua94" parent="mapeado" index="93" instance=ExtResource("3_ofmyh")]
+position = Vector2(4587, 640)
+
+[node name="agua95" parent="mapeado" index="94" instance=ExtResource("3_ofmyh")]
+position = Vector2(4627, 640)
+
+[node name="agua96" parent="mapeado" index="95" instance=ExtResource("3_ofmyh")]
+position = Vector2(4667, 640)
+
+[node name="agua97" parent="mapeado" index="96" instance=ExtResource("3_ofmyh")]
+position = Vector2(4707, 640)
+
+[node name="agua98" parent="mapeado" index="97" instance=ExtResource("3_ofmyh")]
+position = Vector2(4747, 640)
+
+[node name="agua99" parent="mapeado" index="98" instance=ExtResource("3_ofmyh")]
+position = Vector2(4787, 640)
+
+[node name="agua100" parent="mapeado" index="99" instance=ExtResource("3_ofmyh")]
+position = Vector2(4827, 640)
+
+[node name="agua101" parent="mapeado" index="100" instance=ExtResource("3_ofmyh")]
+position = Vector2(4867, 640)
+
+[node name="agua102" parent="mapeado" index="101" instance=ExtResource("3_ofmyh")]
+position = Vector2(4907, 640)
+
+[node name="agua103" parent="mapeado" index="102" instance=ExtResource("3_ofmyh")]
+position = Vector2(4947, 640)
+
+[node name="agua104" parent="mapeado" index="103" instance=ExtResource("3_ofmyh")]
+position = Vector2(4987, 640)
+
+[node name="agua105" parent="mapeado" index="104" instance=ExtResource("3_ofmyh")]
+position = Vector2(5027, 640)
+
+[node name="agua106" parent="mapeado" index="105" instance=ExtResource("3_ofmyh")]
+position = Vector2(5067, 640)
+
+[node name="agua107" parent="mapeado" index="106" instance=ExtResource("3_ofmyh")]
+position = Vector2(5107, 640)
+
+[node name="agua108" parent="mapeado" index="107" instance=ExtResource("3_ofmyh")]
+position = Vector2(5147, 640)
+
+[node name="agua109" parent="mapeado" index="108" instance=ExtResource("3_ofmyh")]
+position = Vector2(5187, 640)
+
+[node name="agua110" parent="mapeado" index="109" instance=ExtResource("3_ofmyh")]
+position = Vector2(5227, 640)
+
+[node name="agua111" parent="mapeado" index="110" instance=ExtResource("3_ofmyh")]
+position = Vector2(5267, 640)
+
+[node name="agua112" parent="mapeado" index="111" instance=ExtResource("3_ofmyh")]
+position = Vector2(5307, 640)
+
+[node name="agua113" parent="mapeado" index="112" instance=ExtResource("3_ofmyh")]
+position = Vector2(5347, 640)
+
+[node name="agua114" parent="mapeado" index="113" instance=ExtResource("3_ofmyh")]
+position = Vector2(5387, 640)
+
+[node name="agua115" parent="mapeado" index="114" instance=ExtResource("3_ofmyh")]
+position = Vector2(5427, 640)
+
+[node name="agua116" parent="mapeado" index="115" instance=ExtResource("3_ofmyh")]
+position = Vector2(5467, 640)
+
+[node name="agua117" parent="mapeado" index="116" instance=ExtResource("3_ofmyh")]
+position = Vector2(5507, 640)
+
+[node name="agua118" parent="mapeado" index="117" instance=ExtResource("3_ofmyh")]
+position = Vector2(5547, 640)
+
+[node name="agua119" parent="mapeado" index="118" instance=ExtResource("3_ofmyh")]
+position = Vector2(5587, 640)
+
+[node name="agua120" parent="mapeado" index="119" instance=ExtResource("3_ofmyh")]
+position = Vector2(5627, 640)
+
+[node name="agua121" parent="mapeado" index="120" instance=ExtResource("3_ofmyh")]
+position = Vector2(5667, 640)
+
+[node name="agua122" parent="mapeado" index="121" instance=ExtResource("3_ofmyh")]
+position = Vector2(5707, 640)
+
+[node name="agua123" parent="mapeado" index="122" instance=ExtResource("3_ofmyh")]
+position = Vector2(5747, 640)
+
+[node name="agua124" parent="mapeado" index="123" instance=ExtResource("3_ofmyh")]
+position = Vector2(5787, 640)
+
+[node name="agua125" parent="mapeado" index="124" instance=ExtResource("3_ofmyh")]
+position = Vector2(5827, 640)
+
+[node name="agua126" parent="mapeado" index="125" instance=ExtResource("3_ofmyh")]
+position = Vector2(5867, 640)
+
+[node name="agua127" parent="mapeado" index="126" instance=ExtResource("3_ofmyh")]
+position = Vector2(5907, 640)
+
+[node name="agua128" parent="mapeado" index="127" instance=ExtResource("3_ofmyh")]
+position = Vector2(5947, 640)
+
+[node name="agua129" parent="mapeado" index="128" instance=ExtResource("3_ofmyh")]
+position = Vector2(5987, 640)
+
+[node name="agua130" parent="mapeado" index="129" instance=ExtResource("3_ofmyh")]
+position = Vector2(6027, 640)
+
+[node name="agua131" parent="mapeado" index="130" instance=ExtResource("3_ofmyh")]
+position = Vector2(6067, 640)
+
+[node name="agua132" parent="mapeado" index="131" instance=ExtResource("3_ofmyh")]
+position = Vector2(6107, 640)
+
+[node name="agua133" parent="mapeado" index="132" instance=ExtResource("3_ofmyh")]
+position = Vector2(6147, 640)
+
+[node name="agua134" parent="mapeado" index="133" instance=ExtResource("3_ofmyh")]
+position = Vector2(6187, 640)
+
+[node name="agua135" parent="mapeado" index="134" instance=ExtResource("3_ofmyh")]
+position = Vector2(6227, 640)
+
+[node name="agua136" parent="mapeado" index="135" instance=ExtResource("3_ofmyh")]
+position = Vector2(6267, 640)
+
+[node name="agua137" parent="mapeado" index="136" instance=ExtResource("3_ofmyh")]
+position = Vector2(6307, 640)
+
+[node name="agua138" parent="mapeado" index="137" instance=ExtResource("3_ofmyh")]
+position = Vector2(6347, 640)
+
+[node name="agua139" parent="mapeado" index="138" instance=ExtResource("3_ofmyh")]
+position = Vector2(6387, 640)
+
+[node name="Teclas" type="Sprite2D" parent="mapeado" index="139"]
+position = Vector2(237, 536)
+texture = ExtResource("5_cek5b")
+
+[node name="Teclas2" type="Sprite2D" parent="mapeado" index="140"]
+position = Vector2(881, 537)
+texture = ExtResource("11_ygiyn")
+
+[node name="Player" parent="." index="2"]
+position = Vector2(37, 613)
+
+[node name="TileMap" parent="." index="6" instance=ExtResource("3_3bwj1")]
+position = Vector2(328, 468)
+layer_0/tile_data = PackedInt32Array(655340, 196608, 1, 720876, 196608, 2, 655341, 196608, 1, 720877, 196608, 2, 655342, 262144, 1, 720878, 262144, 2, 655343, 196608, 1, 720879, 196608, 2, 655344, 262144, 1, 720880, 262144, 2, 655345, 196608, 1, 655346, 262144, 1, 655347, 196608, 1, 655348, 262144, 1, 655349, 196608, 1, 655350, 262144, 1, 655351, 196608, 1, 655352, 262144, 1, 655353, 196608, 1, 720889, 196608, 2, 655354, 262144, 1, 720890, 262144, 2, 655355, 196608, 1, 720891, 196608, 2, 655356, 262144, 1, 720892, 262144, 2, 655357, 196608, 1, 720893, 196608, 2, 786429, 196608, 4, 786425, 131072, 4, 786426, 196608, 4, 786427, 262144, 4, 786428, 327680, 4, 786421, 196608, 4, 786422, 196608, 4, 786423, 262144, 4, 786424, 327680, 4, 786417, 327680, 4, 786420, 196608, 4, 786418, 196608, 4, 786419, 196608, 4, 786414, 327680, 4, 786415, 196608, 4, 786416, 262144, 4, 786411, 131072, 4, 786412, 196608, 4, 786413, 262144, 4, 720881, 196608, 3, 720882, 196608, 3, 720887, 196608, 3, 720888, 196608, 3, 720886, 196608, 3, 720885, 196608, 3, 720884, 196608, 3, 720883, 196608, 3, 655339, 327680, 2, 720875, 262144, 3, 589803, 393216, 3, 524267, 393216, 3, 458731, 393216, 3, 393195, 393216, 3, 327659, 393216, 3, 262123, 393216, 3, 196587, 393216, 3, 131051, 393216, 3, 65515, 393216, 3, -21, 393216, 3, -65557, 393216, 3, 655337, 196608, 2, 720873, 196608, 3, 655338, 262144, 2, 720874, 262144, 3, 524265, 196608, 2, 589801, 196608, 3, 524266, 262144, 2, 589802, 262144, 3, 393193, 196608, 2, 458729, 196608, 3, 393194, 262144, 2, 458730, 262144, 3, 262121, 196608, 2, 327657, 196608, 3, 262122, 262144, 2, 327658, 262144, 3, 131049, 196608, 2, 196585, 196608, 3, 131050, 262144, 2, 196586, 262144, 3, -23, 196608, 2, 65513, 196608, 3, -22, 262144, 2, 65514, 262144, 3, -131095, 196608, 2, -65559, 196608, 3, -131094, 262144, 2, -65558, 262144, 3, 786409, 196608, 4, 786410, 262144, 4, -131093, 393216, 3, -196629, 393216, 3, -262165, 393216, 3, -262167, 196608, 2, -196631, 196608, 3, -262166, 262144, 2, -196630, 262144, 3, 655366, 262144, 2, 720902, 262144, 4, 589831, 196608, 1, 655367, 196608, 2, 720903, 196608, 4, 589832, 262144, 1, 655368, 262144, 2, 720904, 262144, 4, 589833, 196608, 1, 655369, 196608, 2, 720905, 196608, 4, 589834, 262144, 1, 655370, 262144, 2, 720906, 327680, 4, 589835, 393216, 2, 655371, 393216, 3, 720907, 393216, 4, 655380, 196608, 2, 720916, 131072, 4, 589845, 262144, 1, 655381, 196608, 2, 720917, 131072, 4, 589846, 196608, 1, 655382, 196608, 2, 720918, 131072, 4, 589847, 262144, 1, 655383, 262144, 2, 720919, 131072, 4, 589848, 262144, 1, 655384, 262144, 2, 720920, 131072, 4, 589849, 393216, 2, 655385, 393216, 3, 720921, 393216, 4, 655392, 65536, 3, 720928, 65536, 4, 589857, 196608, 1, 655393, 327680, 3, 720929, 196608, 4, 589858, 262144, 1, 655394, 196608, 2, 720930, 262144, 4, 589859, 196608, 1, 655395, 262144, 2, 720931, 196608, 4, 589860, 262144, 1, 655396, 327680, 3, 720932, 262144, 4, 589861, 393216, 2, 655397, 393216, 3, 720933, 393216, 4, 524333, 524288, 3, 524334, 589824, 3, 524335, 655360, 3, 393269, 524288, 3, 393270, 589824, 3, 393271, 655360, 3, 131118, 589824, 3, 131119, 655360, 3, 131117, 524288, 3, -131018, 524288, 3, -131017, 589824, 3, -131016, 655360, 3, -131007, 524288, 3, -131006, 589824, 3, -131005, 655360, 3, 65610, 65536, 3, 131146, 65536, 3, 196682, 65536, 4, 75, 196608, 1, 65611, 196608, 2, 131147, 131072, 3, 196683, 131072, 4, 76, 262144, 1, 65612, 196608, 2, 131148, 196608, 3, 196684, 196608, 4, 77, 262144, 1, 65613, 262144, 2, 131149, 262144, 3, 196685, 262144, 4, 78, 327680, 1, 65614, 327680, 2, 131150, 327680, 3, 196686, 327680, 4, 79, 393216, 1, 65615, 196608, 1, 131151, 196608, 2, 196687, 131072, 4, 65616, 262144, 1, 131152, 262144, 2, 196688, 196608, 4, 65617, 196608, 1, 131153, 196608, 2, 196689, 262144, 4, 65618, 262144, 1, 131154, 262144, 2, 196690, 131072, 4, 65619, 196608, 1, 131155, 196608, 2, 196691, 196608, 4, 65620, 262144, 1, 131156, 262144, 2, 196692, 262144, 4, 65621, 196608, 1, 131157, 196608, 2, 196693, 131072, 4, 65622, 262144, 1, 131158, 262144, 2, 196694, 196608, 4, 65623, 196608, 1, 131159, 196608, 2, 196695, 262144, 4, 65624, 262144, 1, 131160, 262144, 2, 196696, 131072, 4, 65625, 196608, 1, 131161, 196608, 2, 196697, 131072, 4, 65626, 262144, 1, 131162, 262144, 2, 196698, 196608, 4, 65627, 196608, 1, 131163, 196608, 2, 196699, 262144, 4, 65628, 131072, 2, 131164, 262144, 2, 196700, 327680, 4, 65629, 393216, 3, 131165, 393216, 4, 196701, 393216, 4, 92, 65536, 2, 93, 393216, 2, 74, 65536, 2, -130970, 524288, 3, -130969, 589824, 3, -130968, 655360, 3, -327570, 524288, 3, -327569, 589824, 3, -327568, 655360, 3, -327558, 524288, 3, -327557, 589824, 3, -327556, 655360, 3, -130956, 524288, 3, -130955, 589824, 3, -130954, 655360, 3, -458622, 524288, 3, -458621, 589824, 3, -458620, 655360, 3, -65397, 65536, 3, 139, 65536, 3, 65675, 65536, 4, -130932, 196608, 1, -65396, 196608, 2, 140, 131072, 3, 65676, 196608, 3, -130931, 196608, 1, -65395, 196608, 2, 141, 196608, 3, 65677, 262144, 3, -130930, 262144, 1, -65394, 262144, 2, 142, 262144, 3, 65678, 196608, 3, -130929, 327680, 1, -65393, 327680, 2, 143, 196608, 2, 65679, 262144, 3, -130928, 393216, 1, -65392, 196608, 1, 144, 196608, 2, 65680, 196608, 3, 131215, 262144, 4, 131216, 196608, 4, -65391, 262144, 1, 145, 262144, 2, 65681, 262144, 3, 131217, 262144, 4, -65390, 196608, 1, 146, 196608, 2, 65682, 196608, 3, 131218, 196608, 4, -65389, 262144, 1, 147, 262144, 2, 65683, 262144, 3, 131219, 262144, 4, -65388, 196608, 1, 148, 196608, 2, 65684, 196608, 3, 131220, 196608, 4, -65387, 262144, 1, 149, 262144, 2, 65685, 262144, 3, 131221, 262144, 4, -65386, 196608, 1, 150, 196608, 2, 65686, 196608, 3, 131222, 196608, 4, -65385, 262144, 1, 151, 262144, 2, 65687, 262144, 3, 131223, 262144, 4, -65384, 196608, 1, 152, 196608, 2, 65688, 196608, 3, 131224, 196608, 4, -65383, 262144, 1, 153, 262144, 2, 65689, 262144, 3, 131225, 262144, 4, -65382, 196608, 1, 154, 196608, 2, 65690, 196608, 3, 131226, 196608, 4, -65381, 262144, 1, 155, 262144, 2, 65691, 262144, 3, 131227, 262144, 4, -65380, 196608, 1, 156, 196608, 2, 65692, 196608, 3, 131228, 196608, 4, -65379, 262144, 1, 157, 262144, 2, 65693, 262144, 3, 131229, 262144, 4, -65378, 196608, 1, 158, 196608, 2, 65694, 196608, 3, 131230, 196608, 4, -65377, 262144, 1, 159, 262144, 2, 65695, 262144, 3, 131231, 262144, 4, -65376, 196608, 1, 160, 196608, 2, 65696, 196608, 3, 131232, 196608, 4, -65375, 262144, 1, 161, 262144, 2, 65697, 262144, 3, 131233, 262144, 4, -65374, 196608, 1, 162, 196608, 2, -65373, 262144, 1, 163, 262144, 2, -65372, 196608, 1, 164, 196608, 2, -65371, 262144, 1, 165, 262144, 2, -65370, 196608, 1, 166, 196608, 2, -65369, 262144, 1, 167, 262144, 2, 65702, 196608, 3, 131238, 196608, 4, 65703, 262144, 3, 131239, 262144, 4, 65700, 196608, 3, 131236, 196608, 4, 65701, 262144, 3, 131237, 262144, 4, 65698, 196608, 3, 131234, 196608, 4, 65699, 262144, 3, 131235, 262144, 4, 131214, 196608, 4, 131212, 196608, 4, 131213, 262144, 4, -130933, 65536, 2, 131211, 65536, 4, -130904, 65536, 2, -65368, 131072, 2, 168, 196608, 2, -130903, 262144, 1, -65367, 262144, 2, 169, 262144, 2, -130902, 393216, 2, -65366, 393216, 3, 170, 393216, 3, 65706, 393216, 3, 131242, 393216, 4, 131240, 196608, 4, 131241, 262144, 4, 65704, 196608, 3, 65705, 262144, 3, 177, 524288, 3, 178, 589824, 3, 179, 655360, 3, 65722, 524288, 3, 65723, 589824, 3, 65724, 655360, 3, 262342, 65536, 2, 327878, 65536, 3, 393414, 65536, 4, 196807, 131072, 1, 262343, 131072, 2, 327879, 131072, 3, 393415, 131072, 4, 131272, 196608, 0, 196808, 196608, 1, 262344, 196608, 2, 327880, 196608, 3, 393416, 196608, 4, 131273, 262144, 0, 196809, 262144, 1, 262345, 262144, 2, 327881, 262144, 3, 393417, 262144, 4, 196810, 327680, 1, 262346, 327680, 2, 327882, 327680, 3, 393418, 327680, 4, 196811, 393216, 1, 262347, 393216, 2, 327883, 393216, 3, 393419, 393216, 4, 655572, 65536, 2, 721108, 65536, 3, 786644, 65536, 4, 590037, 131072, 1, 655573, 131072, 2, 721109, 131072, 3, 786645, 131072, 4, 524502, 196608, 0, 590038, 196608, 1, 655574, 196608, 2, 721110, 196608, 3, 786646, 196608, 4, 524503, 262144, 0, 590039, 262144, 1, 655575, 262144, 2, 721111, 262144, 3, 786647, 262144, 4, 590040, 327680, 1, 655576, 327680, 2, 721112, 327680, 3, 786648, 327680, 4, 590041, 393216, 1, 655577, 393216, 2, 721113, 393216, 3, 786649, 393216, 4, 655587, 65536, 2, 721123, 65536, 3, 786659, 65536, 4, 590052, 131072, 1, 655588, 131072, 2, 721124, 131072, 3, 786660, 131072, 4, 524517, 196608, 0, 590053, 196608, 1, 655589, 196608, 2, 721125, 196608, 3, 786661, 196608, 4, 524518, 262144, 0, 590054, 262144, 1, 655590, 262144, 2, 721126, 262144, 3, 786662, 262144, 4, 590055, 327680, 1, 655591, 327680, 2, 721127, 327680, 3, 786663, 327680, 4, 590056, 393216, 1, 655592, 393216, 2, 721128, 393216, 3, 786664, 393216, 4, 655602, 65536, 2, 721138, 65536, 3, 786674, 65536, 4, 590067, 131072, 1, 655603, 131072, 2, 721139, 131072, 3, 786675, 131072, 4, 524532, 196608, 0, 590068, 196608, 1, 655604, 196608, 2, 721140, 196608, 3, 786676, 196608, 4, 524533, 262144, 0, 590069, 262144, 1, 655605, 262144, 2, 721141, 262144, 3, 786677, 262144, 4, 590070, 327680, 1, 655606, 327680, 2, 721142, 327680, 3, 786678, 327680, 4, 590071, 393216, 1, 655607, 393216, 2, 721143, 393216, 3, 786679, 393216, 4, 655617, 65536, 2, 721153, 65536, 3, 786689, 65536, 4, 590082, 131072, 1, 655618, 131072, 2, 721154, 131072, 3, 786690, 131072, 4, 524547, 196608, 0, 590083, 196608, 1, 655619, 196608, 2, 721155, 196608, 3, 786691, 196608, 4, 524548, 262144, 0, 590084, 262144, 1, 655620, 262144, 2, 721156, 262144, 3, 786692, 262144, 4, 590085, 327680, 1, 655621, 327680, 2, 721157, 327680, 3, 786693, 327680, 4, 590086, 393216, 1, 655622, 393216, 2, 721158, 393216, 3, 786694, 393216, 4, 655632, 65536, 2, 721168, 65536, 3, 786704, 65536, 4, 590097, 131072, 1, 655633, 131072, 2, 721169, 131072, 3, 786705, 131072, 4, 524562, 196608, 0, 590098, 196608, 1, 655634, 196608, 2, 721170, 196608, 3, 786706, 196608, 4, 524563, 262144, 0, 590099, 262144, 1, 655635, 262144, 2, 721171, 262144, 3, 786707, 262144, 4, 590100, 327680, 1, 655636, 327680, 2, 721172, 327680, 3, 786708, 327680, 4, 590101, 393216, 1, 655637, 393216, 2, 721173, 393216, 3, 786709, 393216, 4, 459036, 524288, 1, 459037, 524288, 1, 327970, 524288, 1, 327971, 524288, 1, 196904, 524288, 1, 196905, 524288, 1, 196906, 524288, 1, 196914, 327680, 2, 262450, 196608, 2, 196915, 262144, 1, 262451, 262144, 2, 196916, 196608, 1, 262452, 196608, 2, 196917, 262144, 1, 262453, 262144, 2, 196918, 196608, 1, 262454, 196608, 2, 196919, 262144, 1, 262455, 262144, 2, 196920, 196608, 1, 262456, 196608, 2, 196921, 262144, 1, 262457, 262144, 2, 196922, 196608, 1, 262458, 196608, 2, 196923, 262144, 1, 262459, 262144, 2, 196924, 196608, 1, 262460, 196608, 2, 196925, 262144, 1, 262461, 262144, 2, 196926, 196608, 1, 262462, 196608, 2, 196927, 262144, 1, 262463, 262144, 2, 196928, 196608, 1, 262464, 196608, 2, 196929, 262144, 1, 262465, 262144, 2, 196930, 196608, 1, 262466, 196608, 2, 196931, 262144, 1, 262467, 262144, 2, 196932, 196608, 1, 262468, 196608, 2, 196933, 262144, 1, 262469, 262144, 2, 196934, 196608, 1, 262470, 196608, 2, 196935, 262144, 1, 262471, 262144, 2, 196936, 196608, 1, 262472, 196608, 2, 196937, 262144, 1, 262473, 262144, 2, 196938, 196608, 1, 262474, 196608, 2, 196939, 262144, 1, 262475, 262144, 2, 196940, 196608, 1, 262476, 196608, 2, 196941, 262144, 1, 262477, 262144, 2, 196942, 196608, 1, 262478, 196608, 2, 196943, 262144, 1, 262479, 262144, 2, 196944, 196608, 1, 262480, 196608, 2, 196945, 262144, 1, 262481, 262144, 2, 196946, 131072, 2, 262482, 262144, 3, 262494, 65536, 2, 328030, 65536, 3, 393566, 65536, 4, 196959, 131072, 1, 262495, 131072, 2, 328031, 131072, 3, 393567, 131072, 4, 131424, 196608, 0, 196960, 196608, 1, 262496, 196608, 2, 328032, 196608, 3, 393568, 196608, 4, 131425, 262144, 0, 196961, 262144, 1, 262497, 262144, 2, 328033, 262144, 3, 393569, 262144, 4, 196962, 327680, 1, 262498, 327680, 2, 328034, 327680, 3, 393570, 327680, 4, 196963, 393216, 1, 262499, 393216, 2, 328035, 393216, 3, 393571, 393216, 4, 131410, 65536, 2, 131378, 393216, 2, 131377, 131072, 1, 196913, 65536, 3, 262449, 65536, 3, 327985, 65536, 4, 327986, 131072, 4, 327987, 196608, 4, 327988, 262144, 4, 327989, 327680, 4, 327990, 131072, 4, 327991, 196608, 4, 327992, 262144, 4, 327993, 327680, 4, 327994, 131072, 4, 327995, 196608, 4, 327996, 262144, 4, 327997, 327680, 4, 327998, 131072, 4, 327999, 196608, 4, 328000, 262144, 4, 328001, 327680, 4, 328002, 131072, 4, 328003, 196608, 4, 328004, 262144, 4, 328005, 327680, 4, 328006, 131072, 4, 328007, 196608, 4, 328008, 262144, 4, 328009, 327680, 4, 328010, 131072, 4, 328011, 196608, 4, 328012, 262144, 4, 328013, 327680, 4, 328014, 131072, 4, 328015, 196608, 4, 328016, 262144, 4, 328017, 327680, 4, 131411, 393216, 2, 196947, 393216, 3, 262483, 393216, 3, 328019, 393216, 4, 328018, 327680, 4, 655358, 262144, 1, 720894, 262144, 2, 786430, 262144, 4, 655359, 196608, 1, 720895, 196608, 2, 786431, 196608, 4, 589824, 262144, 1, 655360, 262144, 2, 720896, 262144, 4, 589825, 196608, 1, 655361, 196608, 2, 720897, 196608, 4, 589826, 262144, 1, 655362, 262144, 2, 720898, 262144, 4, 589827, 196608, 1, 655363, 196608, 2, 720899, 196608, 4, 589828, 262144, 1, 655364, 262144, 2, 720900, 262144, 4, 589829, 196608, 1, 655365, 196608, 2, 720901, 196608, 4, 589830, 262144, 1, 589843, 131072, 1, 589844, 196608, 1, 655379, 65536, 3, 720915, 65536, 4, 589856, 131072, 1, 524325, 393216, 1)
+
+[node name="enemies" type="Node2D" parent="." index="7"]
+
+[node name="pez" parent="enemies" index="0" instance=ExtResource("5_8s32i")]
+position = Vector2(544, 623)
+scale = Vector2(0.7, 0.7)
+
+[node name="pez2" parent="enemies" index="1" instance=ExtResource("5_8s32i")]
+position = Vector2(594, 623)
+scale = Vector2(0.7, 0.7)
+
+[node name="pez3" parent="enemies" index="2" instance=ExtResource("5_8s32i")]
+position = Vector2(759, 623)
+scale = Vector2(0.7, 0.7)
+
+[node name="pez4" parent="enemies" index="3" instance=ExtResource("5_8s32i")]
+position = Vector2(807, 623)
+scale = Vector2(0.7, 0.7)
+
+[node name="pez5" parent="enemies" index="4" instance=ExtResource("5_8s32i")]
+position = Vector2(966, 623)
+scale = Vector2(0.7, 0.7)
+
+[node name="pez6" parent="enemies" index="5" instance=ExtResource("5_8s32i")]
+position = Vector2(1021, 623)
+scale = Vector2(0.7, 0.7)
+
+[node name="pez7" parent="enemies" index="6" instance=ExtResource("5_8s32i")]
+position = Vector2(1084, 623)
+scale = Vector2(0.7, 0.7)
+
+[node name="pez8" parent="enemies" index="7" instance=ExtResource("5_8s32i")]
+position = Vector2(1147, 623)
+scale = Vector2(0.7, 0.7)
+
+[node name="pez9" parent="enemies" index="8" instance=ExtResource("5_8s32i")]
+position = Vector2(1216, 623)
+scale = Vector2(0.7, 0.7)
+
+[node name="pez10" parent="enemies" index="9" instance=ExtResource("5_8s32i")]
+position = Vector2(1293, 623)
+scale = Vector2(0.7, 0.7)
+
+[node name="pez11" parent="enemies" index="10" instance=ExtResource("5_8s32i")]
+position = Vector2(1370, 623)
+scale = Vector2(0.7, 0.7)
+
+[node name="pez12" parent="enemies" index="11" instance=ExtResource("5_8s32i")]
+position = Vector2(1450, 623)
+scale = Vector2(0.7, 0.7)
+
+[node name="pez13" parent="enemies" index="12" instance=ExtResource("5_8s32i")]
+position = Vector2(1517, 623)
+scale = Vector2(0.7, 0.7)
+
+[node name="pez14" parent="enemies" index="13" instance=ExtResource("5_8s32i")]
+position = Vector2(1587, 623)
+scale = Vector2(0.7, 0.7)
+
+[node name="pez15" parent="enemies" index="14" instance=ExtResource("5_8s32i")]
+position = Vector2(1667, 623)
+scale = Vector2(0.7, 0.7)
+
+[node name="pez16" parent="enemies" index="15" instance=ExtResource("5_8s32i")]
+position = Vector2(1755, 623)
+scale = Vector2(0.7, 0.7)
+
+[node name="pez17" parent="enemies" index="16" instance=ExtResource("5_8s32i")]
+position = Vector2(1827, 623)
+scale = Vector2(0.7, 0.7)
+
+[node name="pez18" parent="enemies" index="17" instance=ExtResource("5_8s32i")]
+position = Vector2(1900, 623)
+scale = Vector2(0.7, 0.7)
+
+[node name="pez19" parent="enemies" index="18" instance=ExtResource("5_8s32i")]
+position = Vector2(1969, 623)
+scale = Vector2(0.7, 0.7)
+
+[node name="pez20" parent="enemies" index="19" instance=ExtResource("5_8s32i")]
+position = Vector2(2056, 623)
+scale = Vector2(0.7, 0.7)
+
+[node name="pez21" parent="enemies" index="20" instance=ExtResource("5_8s32i")]
+position = Vector2(2147, 623)
+scale = Vector2(0.7, 0.7)
+
+[node name="pez22" parent="enemies" index="21" instance=ExtResource("5_8s32i")]
+position = Vector2(2227, 623)
+scale = Vector2(0.7, 0.7)
+
+[node name="pez23" parent="enemies" index="22" instance=ExtResource("5_8s32i")]
+position = Vector2(2307, 623)
+scale = Vector2(0.7, 0.7)
+
+[node name="pez24" parent="enemies" index="23" instance=ExtResource("5_8s32i")]
+position = Vector2(2387, 623)
+scale = Vector2(0.7, 0.7)
+
+[node name="pez25" parent="enemies" index="24" instance=ExtResource("5_8s32i")]
+position = Vector2(2463, 623)
+scale = Vector2(0.7, 0.7)
+
+[node name="pez26" parent="enemies" index="25" instance=ExtResource("5_8s32i")]
+position = Vector2(2530, 623)
+scale = Vector2(0.7, 0.7)
+
+[node name="pez27" parent="enemies" index="26" instance=ExtResource("5_8s32i")]
+position = Vector2(2615, 623)
+scale = Vector2(0.7, 0.7)
+
+[node name="pez28" parent="enemies" index="27" instance=ExtResource("5_8s32i")]
+position = Vector2(2691, 623)
+scale = Vector2(0.7, 0.7)
+
+[node name="pez29" parent="enemies" index="28" instance=ExtResource("5_8s32i")]
+position = Vector2(2769, 623)
+scale = Vector2(0.7, 0.7)
+
+[node name="pez30" parent="enemies" index="29" instance=ExtResource("5_8s32i")]
+position = Vector2(2854, 623)
+scale = Vector2(0.7, 0.7)
+
+[node name="pez31" parent="enemies" index="30" instance=ExtResource("5_8s32i")]
+position = Vector2(2947, 623)
+scale = Vector2(0.7, 0.7)
+
+[node name="pez32" parent="enemies" index="31" instance=ExtResource("5_8s32i")]
+position = Vector2(3041, 623)
+scale = Vector2(0.7, 0.7)
+
+[node name="pez33" parent="enemies" index="32" instance=ExtResource("5_8s32i")]
+position = Vector2(3130, 623)
+scale = Vector2(0.7, 0.7)
+
+[node name="pez34" parent="enemies" index="33" instance=ExtResource("5_8s32i")]
+position = Vector2(3227, 623)
+scale = Vector2(0.7, 0.7)
+
+[node name="pez35" parent="enemies" index="34" instance=ExtResource("5_8s32i")]
+position = Vector2(3335, 623)
+scale = Vector2(0.7, 0.7)
+
+[node name="pez36" parent="enemies" index="35" instance=ExtResource("5_8s32i")]
+position = Vector2(3416, 623)
+scale = Vector2(0.7, 0.7)
+
+[node name="pez37" parent="enemies" index="36" instance=ExtResource("5_8s32i")]
+position = Vector2(3507, 623)
+scale = Vector2(0.7, 0.7)
+
+[node name="pez38" parent="enemies" index="37" instance=ExtResource("5_8s32i")]
+position = Vector2(3594, 623)
+scale = Vector2(0.7, 0.7)
+
+[node name="pez39" parent="enemies" index="38" instance=ExtResource("5_8s32i")]
+position = Vector2(3667, 623)
+scale = Vector2(0.7, 0.7)
+
+[node name="pez40" parent="enemies" index="39" instance=ExtResource("5_8s32i")]
+position = Vector2(3851, 623)
+scale = Vector2(0.7, 0.7)
+
+[node name="pez41" parent="enemies" index="40" instance=ExtResource("5_8s32i")]
+position = Vector2(3921, 623)
+scale = Vector2(0.7, 0.7)
+
+[node name="pez42" parent="enemies" index="41" instance=ExtResource("5_8s32i")]
+position = Vector2(4094, 623)
+scale = Vector2(0.7, 0.7)
+
+[node name="pez43" parent="enemies" index="42" instance=ExtResource("5_8s32i")]
+position = Vector2(4158, 623)
+scale = Vector2(0.7, 0.7)
+
+[node name="pez44" parent="enemies" index="43" instance=ExtResource("5_8s32i")]
+position = Vector2(4332, 623)
+scale = Vector2(0.7, 0.7)
+
+[node name="pez45" parent="enemies" index="44" instance=ExtResource("5_8s32i")]
+position = Vector2(4395, 623)
+scale = Vector2(0.7, 0.7)
+
+[node name="pez46" parent="enemies" index="45" instance=ExtResource("5_8s32i")]
+position = Vector2(4568, 623)
+scale = Vector2(0.7, 0.7)
+
+[node name="pez47" parent="enemies" index="46" instance=ExtResource("5_8s32i")]
+position = Vector2(4639, 623)
+scale = Vector2(0.7, 0.7)
+
+[node name="pez48" parent="enemies" index="47" instance=ExtResource("5_8s32i")]
+position = Vector2(4819, 623)
+scale = Vector2(0.7, 0.7)
+
+[node name="pez49" parent="enemies" index="48" instance=ExtResource("5_8s32i")]
+position = Vector2(4898, 623)
+scale = Vector2(0.7, 0.7)
+
+[node name="pez50" parent="enemies" index="49" instance=ExtResource("5_8s32i")]
+position = Vector2(4981, 623)
+scale = Vector2(0.7, 0.7)
+
+[node name="pez51" parent="enemies" index="50" instance=ExtResource("5_8s32i")]
+position = Vector2(5067, 623)
+scale = Vector2(0.7, 0.7)
+
+[node name="pez52" parent="enemies" index="51" instance=ExtResource("5_8s32i")]
+position = Vector2(5155, 623)
+scale = Vector2(0.7, 0.7)
+
+[node name="pez53" parent="enemies" index="52" instance=ExtResource("5_8s32i")]
+position = Vector2(5227, 623)
+scale = Vector2(0.7, 0.7)
+
+[node name="pez54" parent="enemies" index="53" instance=ExtResource("5_8s32i")]
+position = Vector2(5307, 623)
+scale = Vector2(0.7, 0.7)
+
+[node name="pez55" parent="enemies" index="54" instance=ExtResource("5_8s32i")]
+position = Vector2(5378, 623)
+scale = Vector2(0.7, 0.7)
+
+[node name="pez56" parent="enemies" index="55" instance=ExtResource("5_8s32i")]
+position = Vector2(5449, 623)
+scale = Vector2(0.7, 0.7)
+
+[node name="pez57" parent="enemies" index="56" instance=ExtResource("5_8s32i")]
+position = Vector2(5524, 623)
+scale = Vector2(0.7, 0.7)
+
+[node name="pez58" parent="enemies" index="57" instance=ExtResource("5_8s32i")]
+position = Vector2(5587, 623)
+scale = Vector2(0.7, 0.7)
+
+[node name="pez59" parent="enemies" index="58" instance=ExtResource("5_8s32i")]
+position = Vector2(5667, 623)
+scale = Vector2(0.7, 0.7)
+
+[node name="pez60" parent="enemies" index="59" instance=ExtResource("5_8s32i")]
+position = Vector2(5772, 623)
+scale = Vector2(0.7, 0.7)
+
+[node name="pez61" parent="enemies" index="60" instance=ExtResource("5_8s32i")]
+position = Vector2(5867, 623)
+scale = Vector2(0.7, 0.7)
+
+[node name="pez62" parent="enemies" index="61" instance=ExtResource("5_8s32i")]
+position = Vector2(5958, 623)
+scale = Vector2(0.7, 0.7)
+
+[node name="pez63" parent="enemies" index="62" instance=ExtResource("5_8s32i")]
+position = Vector2(6027, 623)
+scale = Vector2(0.7, 0.7)
+
+[node name="pez64" parent="enemies" index="63" instance=ExtResource("5_8s32i")]
+position = Vector2(6107, 623)
+scale = Vector2(0.7, 0.7)
+
+[node name="pez65" parent="enemies" index="64" instance=ExtResource("5_8s32i")]
+position = Vector2(6177, 623)
+scale = Vector2(0.7, 0.7)
+
+[node name="pez66" parent="enemies" index="65" instance=ExtResource("5_8s32i")]
+position = Vector2(6246, 623)
+scale = Vector2(0.7, 0.7)
+
+[node name="pez67" parent="enemies" index="66" instance=ExtResource("5_8s32i")]
+position = Vector2(6307, 623)
+scale = Vector2(0.7, 0.7)
+
+[node name="pez68" parent="enemies" index="67" instance=ExtResource("5_8s32i")]
+position = Vector2(6375, 623)
+scale = Vector2(0.7, 0.7)
+
+[node name="caracol" parent="enemies" index="68" instance=ExtResource("6_d1y2g")]
+position = Vector2(1623, 481)
+scale = Vector2(0.75, 0.75)
+
+[node name="caracol2" parent="enemies" index="69" instance=ExtResource("6_d1y2g")]
+position = Vector2(1684, 481)
+scale = Vector2(0.75, 0.75)
+
+[node name="caracol3" parent="enemies" index="70" instance=ExtResource("6_d1y2g")]
+position = Vector2(1751, 481)
+scale = Vector2(0.75, 0.75)
+
+[node name="caracol4" parent="enemies" index="71" instance=ExtResource("6_d1y2g")]
+position = Vector2(2660, 445)
+scale = Vector2(0.75, 0.75)
+
+[node name="caracol5" parent="enemies" index="72" instance=ExtResource("6_d1y2g")]
+position = Vector2(2752, 445)
+scale = Vector2(0.75, 0.75)
+
+[node name="caracol6" parent="enemies" index="73" instance=ExtResource("6_d1y2g")]
+position = Vector2(2861, 445)
+scale = Vector2(0.75, 0.75)
+
+[node name="caracol7" parent="enemies" index="74" instance=ExtResource("6_d1y2g")]
+position = Vector2(2977, 445)
+scale = Vector2(0.75, 0.75)
+
+[node name="caracol8" parent="enemies" index="75" instance=ExtResource("6_d1y2g")]
+position = Vector2(5267, 508)
+scale = Vector2(0.75, 0.75)
+
+[node name="caracol9" parent="enemies" index="76" instance=ExtResource("6_d1y2g")]
+position = Vector2(5399, 508)
+scale = Vector2(0.75, 0.75)
+
+[node name="caracol10" parent="enemies" index="77" instance=ExtResource("6_d1y2g")]
+position = Vector2(5545, 508)
+scale = Vector2(0.75, 0.75)
+
+[node name="caracol11" parent="enemies" index="78" instance=ExtResource("6_d1y2g")]
+position = Vector2(5677, 508)
+scale = Vector2(0.75, 0.75)
+
+[node name="puntos" type="Node2D" parent="." index="8"]
+
+[node name="herramienta" parent="puntos" index="0" instance=ExtResource("7_24xqa")]
+position = Vector2(526, 586)
+
+[node name="herramienta2" parent="puntos" index="1" instance=ExtResource("7_24xqa")]
+position = Vector2(554, 556)
+
+[node name="herramienta3" parent="puntos" index="2" instance=ExtResource("7_24xqa")]
+position = Vector2(582, 528)
+
+[node name="herramienta4" parent="puntos" index="3" instance=ExtResource("7_24xqa")]
+position = Vector2(945, 595)
+
+[node name="herramienta5" parent="puntos" index="4" instance=ExtResource("7_24xqa")]
+position = Vector2(1110, 580)
+
+[node name="herramienta6" parent="puntos" index="5" instance=ExtResource("7_24xqa")]
+position = Vector2(1147, 554)
+
+[node name="herramienta7" parent="puntos" index="6" instance=ExtResource("7_24xqa")]
+position = Vector2(1099, 481)
+
+[node name="herramienta8" parent="puntos" index="7" instance=ExtResource("7_24xqa")]
+position = Vector2(1124, 452)
+
+[node name="herramienta9" parent="puntos" index="8" instance=ExtResource("7_24xqa")]
+position = Vector2(1152, 422)
+
+[node name="herramienta10" parent="puntos" index="9" instance=ExtResource("7_24xqa")]
+position = Vector2(1387, 422)
+
+[node name="herramienta11" parent="puntos" index="10" instance=ExtResource("7_24xqa")]
+position = Vector2(1387, 394)
+
+[node name="herramienta12" parent="puntos" index="11" instance=ExtResource("7_24xqa")]
+position = Vector2(1602, 452)
+
+[node name="herramienta13" parent="puntos" index="12" instance=ExtResource("7_24xqa")]
+position = Vector2(1622, 431)
+
+[node name="herramienta14" parent="puntos" index="13" instance=ExtResource("7_24xqa")]
+position = Vector2(1646, 407)
+
+[node name="herramienta15" parent="puntos" index="14" instance=ExtResource("7_24xqa")]
+position = Vector2(1667, 384)
+
+[node name="herramienta16" parent="puntos" index="15" instance=ExtResource("7_24xqa")]
+position = Vector2(1787, 461)
+
+[node name="herramienta17" parent="puntos" index="16" instance=ExtResource("7_24xqa")]
+position = Vector2(1761, 437)
+
+[node name="herramienta18" parent="puntos" index="17" instance=ExtResource("7_24xqa")]
+position = Vector2(1740, 416)
+
+[node name="herramienta19" parent="puntos" index="18" instance=ExtResource("7_24xqa")]
+position = Vector2(1718, 394)
+
+[node name="herramienta20" parent="puntos" index="19" instance=ExtResource("7_24xqa")]
+position = Vector2(1694, 360)
+
+[node name="herramienta21" parent="puntos" index="20" instance=ExtResource("7_24xqa")]
+position = Vector2(1987, 420)
+
+[node name="herramienta22" parent="puntos" index="21" instance=ExtResource("7_24xqa")]
+position = Vector2(2107, 379)
+
+[node name="herramienta23" parent="puntos" index="22" instance=ExtResource("7_24xqa")]
+position = Vector2(2206, 425)
+
+[node name="herramienta24" parent="puntos" index="23" instance=ExtResource("7_24xqa")]
+position = Vector2(2427, 345)
+
+[node name="herramienta25" parent="puntos" index="24" instance=ExtResource("7_24xqa")]
+position = Vector2(2639, 420)
+
+[node name="herramienta26" parent="puntos" index="25" instance=ExtResource("7_24xqa")]
+position = Vector2(2659, 394)
+
+[node name="herramienta27" parent="puntos" index="26" instance=ExtResource("7_24xqa")]
+position = Vector2(2676, 369)
+
+[node name="herramienta28" parent="puntos" index="27" instance=ExtResource("7_24xqa")]
+position = Vector2(2809, 440)
+
+[node name="herramienta29" parent="puntos" index="28" instance=ExtResource("7_24xqa")]
+position = Vector2(2917, 440)
+
+[node name="herramienta30" parent="puntos" index="29" instance=ExtResource("7_24xqa")]
+position = Vector2(3004, 422)
+
+[node name="herramienta31" parent="puntos" index="30" instance=ExtResource("7_24xqa")]
+position = Vector2(2979, 394)
+
+[node name="herramienta32" parent="puntos" index="31" instance=ExtResource("7_24xqa")]
+position = Vector2(2956, 369)
+
+[node name="herramienta33" parent="puntos" index="32" instance=ExtResource("7_24xqa")]
+position = Vector2(3322, 468)
+
+[node name="herramienta34" parent="puntos" index="33" instance=ExtResource("7_24xqa")]
+position = Vector2(3322, 440)
+
+[node name="herramienta35" parent="puntos" index="34" instance=ExtResource("7_24xqa")]
+position = Vector2(3322, 414)
+
+[node name="herramienta36" parent="puntos" index="35" instance=ExtResource("7_24xqa")]
+position = Vector2(3322, 388)
+
+[node name="herramienta37" parent="puntos" index="36" instance=ExtResource("7_24xqa")]
+position = Vector2(3765, 602)
+
+[node name="herramienta38" parent="puntos" index="37" instance=ExtResource("7_24xqa")]
+position = Vector2(3765, 571)
+
+[node name="herramienta39" parent="puntos" index="38" instance=ExtResource("7_24xqa")]
+position = Vector2(3765, 539)
+
+[node name="herramienta40" parent="puntos" index="39" instance=ExtResource("7_24xqa")]
+position = Vector2(4243, 602)
+
+[node name="herramienta41" parent="puntos" index="40" instance=ExtResource("7_24xqa")]
+position = Vector2(4245, 571)
+
+[node name="herramienta42" parent="puntos" index="41" instance=ExtResource("7_24xqa")]
+position = Vector2(4245, 541)
+
+[node name="herramienta43" parent="puntos" index="42" instance=ExtResource("7_24xqa")]
+position = Vector2(4731, 593)
+
+[node name="herramienta44" parent="puntos" index="43" instance=ExtResource("7_24xqa")]
+position = Vector2(4731, 565)
+
+[node name="herramienta45" parent="puntos" index="44" instance=ExtResource("7_24xqa")]
+position = Vector2(4733, 539)
+
+[node name="herramienta46" parent="puntos" index="45" instance=ExtResource("7_24xqa")]
+position = Vector2(5246, 485)
+
+[node name="herramienta47" parent="puntos" index="46" instance=ExtResource("7_24xqa")]
+position = Vector2(5267, 459)
+
+[node name="herramienta48" parent="puntos" index="47" instance=ExtResource("7_24xqa")]
+position = Vector2(5286, 434)
+
+[node name="herramienta49" parent="puntos" index="48" instance=ExtResource("7_24xqa")]
+position = Vector2(5328, 508)
+
+[node name="herramienta50" parent="puntos" index="49" instance=ExtResource("7_24xqa")]
+position = Vector2(5470, 508)
+
+[node name="herramienta51" parent="puntos" index="50" instance=ExtResource("7_24xqa")]
+position = Vector2(5621, 508)
+
+[node name="herramienta52" parent="puntos" index="51" instance=ExtResource("7_24xqa")]
+position = Vector2(5723, 488)
+
+[node name="herramienta53" parent="puntos" index="52" instance=ExtResource("7_24xqa")]
+position = Vector2(5693, 466)
+
+[node name="herramienta54" parent="puntos" index="53" instance=ExtResource("7_24xqa")]
+position = Vector2(5667, 445)
+
+[node name="destonillador" parent="." index="9" instance=ExtResource("7_fhw2x")]
+position = Vector2(5979, 488)
+scale = Vector2(0.7, 0.7)
+
+[connection signal="recolectar_herramientas" from="puntos/herramienta" to="." method="_on_herramienta_recolectar_herramientas"]
+[connection signal="recolectar_herramientas" from="puntos/herramienta2" to="." method="_on_herramienta_recolectar_herramientas"]
+[connection signal="recolectar_herramientas" from="puntos/herramienta3" to="." method="_on_herramienta_recolectar_herramientas"]
+[connection signal="recolectar_herramientas" from="puntos/herramienta4" to="." method="_on_herramienta_recolectar_herramientas"]
+[connection signal="recolectar_herramientas" from="puntos/herramienta5" to="." method="_on_herramienta_recolectar_herramientas"]
+[connection signal="recolectar_herramientas" from="puntos/herramienta6" to="." method="_on_herramienta_recolectar_herramientas"]
+[connection signal="recolectar_herramientas" from="puntos/herramienta7" to="." method="_on_herramienta_recolectar_herramientas"]
+[connection signal="recolectar_herramientas" from="puntos/herramienta8" to="." method="_on_herramienta_recolectar_herramientas"]
+[connection signal="recolectar_herramientas" from="puntos/herramienta9" to="." method="_on_herramienta_recolectar_herramientas"]
+[connection signal="recolectar_herramientas" from="puntos/herramienta10" to="." method="_on_herramienta_recolectar_herramientas"]
+[connection signal="recolectar_herramientas" from="puntos/herramienta11" to="." method="_on_herramienta_recolectar_herramientas"]
+[connection signal="recolectar_herramientas" from="puntos/herramienta12" to="." method="_on_herramienta_recolectar_herramientas"]
+[connection signal="recolectar_herramientas" from="puntos/herramienta13" to="." method="_on_herramienta_recolectar_herramientas"]
+[connection signal="recolectar_herramientas" from="puntos/herramienta14" to="." method="_on_herramienta_recolectar_herramientas"]
+[connection signal="recolectar_herramientas" from="puntos/herramienta15" to="." method="_on_herramienta_recolectar_herramientas"]
+[connection signal="recolectar_herramientas" from="puntos/herramienta16" to="." method="_on_herramienta_recolectar_herramientas"]
+[connection signal="recolectar_herramientas" from="puntos/herramienta17" to="." method="_on_herramienta_recolectar_herramientas"]
+[connection signal="recolectar_herramientas" from="puntos/herramienta18" to="." method="_on_herramienta_recolectar_herramientas"]
+[connection signal="recolectar_herramientas" from="puntos/herramienta19" to="." method="_on_herramienta_recolectar_herramientas"]
+[connection signal="recolectar_herramientas" from="puntos/herramienta20" to="." method="_on_herramienta_recolectar_herramientas"]
+[connection signal="recolectar_herramientas" from="puntos/herramienta21" to="." method="_on_herramienta_recolectar_herramientas"]
+[connection signal="recolectar_herramientas" from="puntos/herramienta22" to="." method="_on_herramienta_recolectar_herramientas"]
+[connection signal="recolectar_herramientas" from="puntos/herramienta23" to="." method="_on_herramienta_recolectar_herramientas"]
+[connection signal="recolectar_herramientas" from="puntos/herramienta24" to="." method="_on_herramienta_recolectar_herramientas"]
+[connection signal="recolectar_herramientas" from="puntos/herramienta25" to="." method="_on_herramienta_recolectar_herramientas"]
+[connection signal="recolectar_herramientas" from="puntos/herramienta26" to="." method="_on_herramienta_recolectar_herramientas"]
+[connection signal="recolectar_herramientas" from="puntos/herramienta27" to="." method="_on_herramienta_recolectar_herramientas"]
+[connection signal="recolectar_herramientas" from="puntos/herramienta28" to="." method="_on_herramienta_recolectar_herramientas"]
+[connection signal="recolectar_herramientas" from="puntos/herramienta29" to="." method="_on_herramienta_recolectar_herramientas"]
+[connection signal="recolectar_herramientas" from="puntos/herramienta30" to="." method="_on_herramienta_recolectar_herramientas"]
+[connection signal="recolectar_herramientas" from="puntos/herramienta31" to="." method="_on_herramienta_recolectar_herramientas"]
+[connection signal="recolectar_herramientas" from="puntos/herramienta32" to="." method="_on_herramienta_recolectar_herramientas"]
+[connection signal="recolectar_herramientas" from="puntos/herramienta33" to="." method="_on_herramienta_recolectar_herramientas"]
+[connection signal="recolectar_herramientas" from="puntos/herramienta34" to="." method="_on_herramienta_recolectar_herramientas"]
+[connection signal="recolectar_herramientas" from="puntos/herramienta35" to="." method="_on_herramienta_recolectar_herramientas"]
+[connection signal="recolectar_herramientas" from="puntos/herramienta36" to="." method="_on_herramienta_recolectar_herramientas"]
+[connection signal="recolectar_herramientas" from="puntos/herramienta37" to="." method="_on_herramienta_recolectar_herramientas"]
+[connection signal="recolectar_herramientas" from="puntos/herramienta38" to="." method="_on_herramienta_recolectar_herramientas"]
+[connection signal="recolectar_herramientas" from="puntos/herramienta39" to="." method="_on_herramienta_recolectar_herramientas"]
+[connection signal="recolectar_herramientas" from="puntos/herramienta40" to="." method="_on_herramienta_recolectar_herramientas"]
+[connection signal="recolectar_herramientas" from="puntos/herramienta41" to="." method="_on_herramienta_recolectar_herramientas"]
+[connection signal="recolectar_herramientas" from="puntos/herramienta42" to="." method="_on_herramienta_recolectar_herramientas"]
+[connection signal="recolectar_herramientas" from="puntos/herramienta43" to="." method="_on_herramienta_recolectar_herramientas"]
+[connection signal="recolectar_herramientas" from="puntos/herramienta44" to="." method="_on_herramienta_recolectar_herramientas"]
+[connection signal="recolectar_herramientas" from="puntos/herramienta45" to="." method="_on_herramienta_recolectar_herramientas"]
+[connection signal="recolectar_herramientas" from="puntos/herramienta46" to="." method="_on_herramienta_recolectar_herramientas"]
+[connection signal="recolectar_herramientas" from="puntos/herramienta47" to="." method="_on_herramienta_recolectar_herramientas"]
+[connection signal="recolectar_herramientas" from="puntos/herramienta48" to="." method="_on_herramienta_recolectar_herramientas"]
+[connection signal="recolectar_herramientas" from="puntos/herramienta49" to="." method="_on_herramienta_recolectar_herramientas"]
+[connection signal="recolectar_herramientas" from="puntos/herramienta50" to="." method="_on_herramienta_recolectar_herramientas"]
+[connection signal="recolectar_herramientas" from="puntos/herramienta51" to="." method="_on_herramienta_recolectar_herramientas"]
+[connection signal="recolectar_herramientas" from="puntos/herramienta52" to="." method="_on_herramienta_recolectar_herramientas"]
+[connection signal="recolectar_herramientas" from="puntos/herramienta53" to="." method="_on_herramienta_recolectar_herramientas"]
+[connection signal="recolectar_herramientas" from="puntos/herramienta54" to="." method="_on_herramienta_recolectar_herramientas"]

@@ -61,3 +61,4 @@ func _on_level_completed_next_level():
 func _on_herramienta_recolectar_herramientas():
 	puntos += 1
 	get_node("CanvasLayer/CenterContainer2/countLabel").text = "Puntos:" + str(int(puntos))
+

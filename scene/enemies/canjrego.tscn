@@ -1,0 +1,63 @@
+[gd_scene load_steps=9 format=3 uid="uid://kur0ruj7na85"]
+
+[ext_resource type="Script" path="res://scripts/canjrego.gd" id="1_1uycj"]
+[ext_resource type="Texture2D" uid="uid://botsnj0pq7ng5" path="res://Recursos/Enemies/crab.png" id="1_slss2"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xxa84"]
+atlas = ExtResource("1_slss2")
+region = Rect2(32, 0, 32, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_auimd"]
+atlas = ExtResource("1_slss2")
+region = Rect2(32, 16, 32, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rdyn7"]
+atlas = ExtResource("1_slss2")
+region = Rect2(32, 32, 32, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_77cex"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xxa84")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_auimd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rdyn7")
+}],
+"loop": true,
+"name": &"caminar",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_sptgx"]
+size = Vector2(26.5, 3.25)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_i4qt3"]
+size = Vector2(32, 17)
+
+[node name="canjrego" type="CharacterBody2D"]
+collision_mask = 3
+script = ExtResource("1_1uycj")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+scale = Vector2(1.5, 1.5)
+sprite_frames = SubResource("SpriteFrames_77cex")
+animation = &"caminar"
+frame_progress = 0.935842
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0.75, 10.375)
+shape = SubResource("RectangleShape2D_sptgx")
+
+[node name="Area2D" type="Area2D" parent="."]
+collision_mask = 3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(0, 1.5)
+shape = SubResource("RectangleShape2D_i4qt3")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

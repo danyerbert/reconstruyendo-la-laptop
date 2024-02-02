@@ -1,0 +1,262 @@
+[gd_scene load_steps=12 format=3 uid="uid://tsrw71h7ksde"]
+
+[ext_resource type="PackedScene" uid="uid://bvrxnaqhvdn30" path="res://scene/world.tscn" id="1_sm2wm"]
+[ext_resource type="PackedScene" uid="uid://b2ss3l8er2go2" path="res://scene/mundos/montanas/segundo_nivel_montanas.tscn" id="2_bh6nl"]
+[ext_resource type="PackedScene" uid="uid://cjf23tq3deb4s" path="res://scene/enemies/raton.tscn" id="3_0koje"]
+[ext_resource type="PackedScene" uid="uid://bgcdbavvuop6f" path="res://scene/level_tile_map.tscn" id="3_fii0w"]
+[ext_resource type="Texture2D" uid="uid://diq854bwl33b7" path="res://Recursos/Fondos/Nuevos Fondos/montañas/parque 1.jpg" id="3_i54dg"]
+[ext_resource type="PackedScene" uid="uid://bjpr11sfao41h" path="res://scene/mapeado/barranco.tscn" id="3_pm1hc"]
+[ext_resource type="AudioStream" uid="uid://bw0puw7351pvj" path="res://Recursos/Canciones/Cunning-fox_by_musicstockproduction.mp3" id="4_08w28"]
+[ext_resource type="PackedScene" uid="uid://clcwhvkesynao" path="res://scene/enemies/pinchos.tscn" id="4_htd04"]
+[ext_resource type="Texture2D" uid="uid://cctdlnvkp8ujr" path="res://Recursos/Fondos/Nuevos Fondos/montañas/parque 2.jpg" id="4_j36ff"]
+[ext_resource type="PackedScene" uid="uid://blwq6xc3lyj2d" path="res://scene/herramienta.tscn" id="6_elab1"]
+[ext_resource type="PackedScene" uid="uid://dachjnwx0dsx0" path="res://scene/partes y piezas/disco_duro.tscn" id="7_oudy5"]
+
+[node name="World" instance=ExtResource("1_sm2wm")]
+next_level = ExtResource("2_bh6nl")
+
+[node name="fondos" type="Node2D" parent="." index="0"]
+
+[node name="Sprite2D" type="Sprite2D" parent="fondos" index="0"]
+texture_filter = 1
+position = Vector2(702, 347)
+scale = Vector2(1.22922, 1.22922)
+texture = ExtResource("3_i54dg")
+
+[node name="Sprite2D2" type="Sprite2D" parent="fondos" index="1"]
+texture_filter = 1
+position = Vector2(2074, 356)
+scale = Vector2(1.22715, 1.26107)
+texture = ExtResource("4_j36ff")
+
+[node name="Sprite2D3" type="Sprite2D" parent="fondos" index="2"]
+texture_filter = 1
+position = Vector2(3415.36, 348.544)
+scale = Vector2(1.22922, 1.22922)
+texture = ExtResource("3_i54dg")
+
+[node name="Sprite2D4" type="Sprite2D" parent="fondos" index="3"]
+texture_filter = 1
+position = Vector2(4787.36, 357.544)
+scale = Vector2(1.22715, 1.26107)
+texture = ExtResource("4_j36ff")
+
+[node name="Player" parent="." index="1"]
+position = Vector2(54, 618)
+
+[node name="AudioStreamPlayer" parent="." index="4"]
+stream = ExtResource("4_08w28")
+autoplay = true
+
+[node name="enemies" type="Node2D" parent="." index="5"]
+
+[node name="raton" parent="enemies" index="0" instance=ExtResource("3_0koje")]
+position = Vector2(1124, 580)
+scale = Vector2(0.5, 0.5)
+
+[node name="raton2" parent="enemies" index="1" instance=ExtResource("3_0koje")]
+position = Vector2(1156, 580)
+scale = Vector2(0.5, 0.5)
+
+[node name="raton5" parent="enemies" index="2" instance=ExtResource("3_0koje")]
+position = Vector2(1245, 580)
+scale = Vector2(0.5, 0.5)
+
+[node name="raton6" parent="enemies" index="3" instance=ExtResource("3_0koje")]
+position = Vector2(1273, 580)
+scale = Vector2(0.5, 0.5)
+
+[node name="raton7" parent="enemies" index="4" instance=ExtResource("3_0koje")]
+position = Vector2(2560, 500)
+scale = Vector2(0.5, 0.5)
+
+[node name="raton8" parent="enemies" index="5" instance=ExtResource("3_0koje")]
+position = Vector2(2589, 500)
+scale = Vector2(0.5, 0.5)
+
+[node name="raton9" parent="enemies" index="6" instance=ExtResource("3_0koje")]
+position = Vector2(2625, 500)
+scale = Vector2(0.5, 0.5)
+
+[node name="raton10" parent="enemies" index="7" instance=ExtResource("3_0koje")]
+position = Vector2(2657, 500)
+scale = Vector2(0.5, 0.5)
+
+[node name="raton11" parent="enemies" index="8" instance=ExtResource("3_0koje")]
+position = Vector2(2688, 500)
+scale = Vector2(0.5, 0.5)
+
+[node name="mapeado" type="Node2D" parent="." index="6"]
+
+[node name="barranco" parent="mapeado" index="0" instance=ExtResource("3_pm1hc")]
+position = Vector2(578, 642)
+
+[node name="barranco2" parent="mapeado" index="1" instance=ExtResource("3_pm1hc")]
+position = Vector2(830, 642)
+
+[node name="barranco3" parent="mapeado" index="2" instance=ExtResource("3_pm1hc")]
+position = Vector2(1083, 642)
+
+[node name="barranco4" parent="mapeado" index="3" instance=ExtResource("3_pm1hc")]
+position = Vector2(1335, 642)
+
+[node name="barranco5" parent="mapeado" index="4" instance=ExtResource("3_pm1hc")]
+position = Vector2(1590, 642)
+
+[node name="barranco6" parent="mapeado" index="5" instance=ExtResource("3_pm1hc")]
+position = Vector2(1843, 642)
+
+[node name="barranco7" parent="mapeado" index="6" instance=ExtResource("3_pm1hc")]
+position = Vector2(2096, 642)
+
+[node name="barranco8" parent="mapeado" index="7" instance=ExtResource("3_pm1hc")]
+position = Vector2(2350, 642)
+
+[node name="barranco9" parent="mapeado" index="8" instance=ExtResource("3_pm1hc")]
+position = Vector2(2599, 642)
+
+[node name="barranco10" parent="mapeado" index="9" instance=ExtResource("3_pm1hc")]
+position = Vector2(2851, 642)
+
+[node name="barranco11" parent="mapeado" index="10" instance=ExtResource("3_pm1hc")]
+position = Vector2(3103, 642)
+
+[node name="barranco12" parent="mapeado" index="11" instance=ExtResource("3_pm1hc")]
+position = Vector2(3356, 642)
+
+[node name="barranco13" parent="mapeado" index="12" instance=ExtResource("3_pm1hc")]
+position = Vector2(3604, 642)
+
+[node name="pinchos" parent="mapeado" index="13" instance=ExtResource("4_htd04")]
+position = Vector2(294, 635)
+
+[node name="pinchos2" parent="mapeado" index="14" instance=ExtResource("4_htd04")]
+position = Vector2(327, 635)
+
+[node name="pinchos3" parent="mapeado" index="15" instance=ExtResource("4_htd04")]
+position = Vector2(359, 635)
+
+[node name="pinchos4" parent="mapeado" index="16" instance=ExtResource("4_htd04")]
+position = Vector2(388, 635)
+
+[node name="pinchos5" parent="mapeado" index="17" instance=ExtResource("4_htd04")]
+position = Vector2(414, 635)
+
+[node name="puntos" type="Node2D" parent="." index="7"]
+
+[node name="herramienta" parent="puntos" index="0" instance=ExtResource("6_elab1")]
+position = Vector2(528, 589)
+
+[node name="herramienta2" parent="puntos" index="1" instance=ExtResource("6_elab1")]
+position = Vector2(530, 555)
+
+[node name="herramienta3" parent="puntos" index="2" instance=ExtResource("6_elab1")]
+position = Vector2(530, 520)
+
+[node name="herramienta4" parent="puntos" index="3" instance=ExtResource("6_elab1")]
+position = Vector2(958, 529)
+
+[node name="herramienta5" parent="puntos" index="4" instance=ExtResource("6_elab1")]
+position = Vector2(955, 500)
+
+[node name="herramienta6" parent="puntos" index="5" instance=ExtResource("6_elab1")]
+position = Vector2(955, 466)
+
+[node name="herramienta7" parent="puntos" index="6" instance=ExtResource("6_elab1")]
+position = Vector2(1124, 553)
+
+[node name="herramienta8" parent="puntos" index="7" instance=ExtResource("6_elab1")]
+position = Vector2(1152, 529)
+
+[node name="herramienta9" parent="puntos" index="8" instance=ExtResource("6_elab1")]
+position = Vector2(1178, 507)
+
+[node name="herramienta10" parent="puntos" index="9" instance=ExtResource("6_elab1")]
+position = Vector2(1294, 564)
+
+[node name="herramienta11" parent="puntos" index="10" instance=ExtResource("6_elab1")]
+position = Vector2(1273, 541)
+
+[node name="herramienta12" parent="puntos" index="11" instance=ExtResource("6_elab1")]
+position = Vector2(1245, 520)
+
+[node name="herramienta13" parent="puntos" index="12" instance=ExtResource("6_elab1")]
+position = Vector2(1211, 498)
+
+[node name="herramienta14" parent="puntos" index="13" instance=ExtResource("6_elab1")]
+position = Vector2(1517, 508)
+
+[node name="herramienta15" parent="puntos" index="14" instance=ExtResource("6_elab1")]
+position = Vector2(1614, 475)
+
+[node name="herramienta16" parent="puntos" index="15" instance=ExtResource("6_elab1")]
+position = Vector2(2060, 381)
+
+[node name="herramienta17" parent="puntos" index="16" instance=ExtResource("6_elab1")]
+position = Vector2(2236, 427)
+
+[node name="herramienta18" parent="puntos" index="17" instance=ExtResource("6_elab1")]
+position = Vector2(2560, 464)
+
+[node name="herramienta19" parent="puntos" index="18" instance=ExtResource("6_elab1")]
+position = Vector2(2589, 436)
+
+[node name="herramienta20" parent="puntos" index="19" instance=ExtResource("6_elab1")]
+position = Vector2(2617, 412)
+
+[node name="herramienta21" parent="puntos" index="20" instance=ExtResource("6_elab1")]
+position = Vector2(2713, 473)
+
+[node name="herramienta22" parent="puntos" index="21" instance=ExtResource("6_elab1")]
+position = Vector2(2688, 451)
+
+[node name="herramienta23" parent="puntos" index="22" instance=ExtResource("6_elab1")]
+position = Vector2(2665, 427)
+
+[node name="herramienta24" parent="puntos" index="23" instance=ExtResource("6_elab1")]
+position = Vector2(2649, 397)
+
+[node name="herramienta25" parent="puntos" index="24" instance=ExtResource("6_elab1")]
+position = Vector2(3022, 410)
+
+[node name="herramienta26" parent="puntos" index="25" instance=ExtResource("6_elab1")]
+position = Vector2(3022, 379)
+
+[node name="herramienta27" parent="puntos" index="26" instance=ExtResource("6_elab1")]
+position = Vector2(3022, 347)
+
+[node name="TileMap" parent="." index="8" instance=ExtResource("3_fii0w")]
+position = Vector2(423, 443)
+layer_0/tile_data = PackedInt32Array(786406, 196613, 1, 786407, 262149, 1, 786408, 196613, 1, 786409, 262149, 1, 786410, 196613, 1, 786411, 262149, 1, 786412, 196613, 1, 786413, 262149, 1, 786414, 196613, 1, 786415, 262149, 1, 786416, 196613, 1, 786417, 262149, 1, 786418, 196613, 1, 786419, 262149, 1, 786420, 196613, 1, 786421, 262149, 1, 786405, 327685, 2, 720869, 393221, 3, 655333, 393221, 3, 589797, 393221, 3, 524261, 393221, 3, 458725, 393221, 3, 393189, 393221, 3, 327653, 393221, 3, 262117, 393221, 3, 196581, 393221, 3, 131045, 393221, 3, 65509, 393221, 3, -27, 393221, 3, -65563, 393221, 3, 786422, 393221, 2, 851958, 393221, 3, 917494, 327685, 2, 851954, 131077, 3, 917490, 131077, 4, 851955, 196613, 3, 917491, 196613, 4, 851956, 262149, 3, 917492, 262149, 4, 851957, 327685, 3, 917493, 196613, 3, 851950, 131077, 3, 917486, 131077, 4, 851951, 196613, 3, 917487, 196613, 4, 851952, 262149, 3, 917488, 262149, 4, 851953, 327685, 3, 917489, 327685, 4, 851946, 131077, 3, 917482, 131077, 4, 851947, 196613, 3, 917483, 196613, 4, 851948, 262149, 3, 917484, 262149, 4, 851949, 327685, 3, 917485, 327685, 4, 851942, 262149, 3, 917478, 262149, 4, 851943, 327685, 3, 917479, 327685, 4, 851944, 262149, 3, 917480, 262149, 4, 851945, 327685, 3, 917481, 327685, 4, 851940, 131077, 3, 917476, 131077, 4, 851941, 196613, 3, 917477, 196613, 4, 720868, 196613, 2, 786404, 196613, 3, 589796, 196613, 2, 655332, 196613, 3, 458724, 196613, 2, 524260, 196613, 3, 327652, 196613, 2, 393188, 196613, 3, 196580, 196613, 2, 262116, 196613, 3, 65508, 196613, 2, 131044, 196613, 3, -65564, 196613, 2, -28, 196613, 3, 917496, 262149, 1, 917495, 196613, 1, 917497, 196613, 1, 917498, 262149, 1, 917499, 196613, 1, 917500, 262149, 1, 917501, 196613, 1, 917502, 262149, 1, 917503, 196613, 1, 720896, 65541, 2, 786432, 65541, 3, 851968, 131077, 2, 983029, 65541, 4, 983030, 196613, 4, 983031, 262149, 4, 983032, 196613, 4, 983033, 262149, 4, 983034, 196613, 4, 983035, 262149, 4, 983036, 196613, 4, 983037, 262149, 4, 983038, 196613, 4, 983039, 262149, 4, 917504, 196613, 4, 917505, 393221, 4, 720897, 393221, 2, 786433, 393221, 3, 851969, 393221, 3, 655365, 524293, 3, 655366, 589829, 3, 655367, 655365, 3, 589836, 524293, 3, 589837, 589829, 3, 589838, 655365, 3, 524313, 524293, 3, 524314, 589829, 3, 524315, 655365, 3, 393249, 589829, 3, 393250, 655365, 3, 393251, 655365, 3, 458770, 524293, 3, 458771, 589829, 3, 458772, 655365, 3, 393248, 524293, 3, 655401, 65541, 3, 524330, 393221, 2, 589866, 327685, 2, 655402, 196613, 2, 524331, 196613, 0, 589867, 262149, 1, 655403, 262149, 2, 589868, 196613, 1, 655404, 196613, 2, 524333, 327685, 0, 589869, 262149, 1, 655405, 262149, 2, 589870, 196613, 1, 655406, 196613, 2, 720937, 65541, 3, 786473, 65541, 4, 720938, 196613, 3, 786474, 131077, 4, 720939, 262149, 3, 786475, 196613, 4, 720940, 196613, 3, 786476, 262149, 4, 720941, 262149, 3, 786477, 327685, 4, 720942, 196613, 3, 786478, 131077, 4, 589871, 262149, 1, 655407, 262149, 2, 720943, 262149, 3, 589872, 196613, 1, 655408, 196613, 2, 720944, 196613, 3, 589873, 262149, 1, 655409, 262149, 2, 720945, 262149, 3, 589874, 196613, 1, 655410, 196613, 2, 720946, 196613, 3, 589875, 262149, 1, 655411, 262149, 2, 720947, 262149, 3, 589876, 196613, 1, 655412, 196613, 2, 720948, 196613, 3, 589877, 262149, 1, 655413, 262149, 2, 720949, 262149, 3, 589878, 196613, 1, 655414, 196613, 2, 720950, 196613, 3, 589879, 131077, 2, 655415, 262149, 2, 720951, 262149, 3, 786479, 196613, 4, 786480, 262149, 4, 786481, 327685, 4, 786482, 131077, 4, 786483, 196613, 4, 786484, 262149, 4, 786485, 327685, 4, 786486, 131077, 4, 786487, 196613, 4, 786488, 393221, 4, 589880, 393221, 3, 655416, 393221, 3, 720952, 393221, 3, 589865, 65541, 3, 524344, 393221, 2, 524329, 65541, 2, 524343, 65541, 2, 458814, 524293, 1, 327748, 524293, 1, 196682, 524293, 1, 65617, 524293, 3, 65618, 589829, 3, 65619, 655365, 3, -65446, 524293, 3, -65445, 589829, 3, -65444, 655365, 3, -196509, 1, 10, -262044, 65537, 9, -196508, 65537, 10, -262043, 131073, 9, -196507, 131073, 10, -262042, 196609, 9, -196506, 196609, 10, -262041, 262145, 9, -196505, 262145, 10, -196504, 327681, 10, 110, 1, 10, -65425, 65537, 9, 111, 65537, 10, -65424, 131073, 9, 112, 131073, 10, -65423, 196609, 9, 113, 196609, 10, -65422, 262145, 9, 114, 262145, 10, 115, 327681, 10, -130951, 1, 10, -196486, 65537, 9, -130950, 65537, 10, -196485, 131073, 9, -130949, 131073, 10, -196484, 196609, 9, -130948, 196609, 10, -196483, 262145, 9, -130947, 262145, 10, -130946, 327681, 10, 262275, 65541, 3, 327811, 65541, 3, 393347, 65541, 4, 262276, 327685, 2, 327812, 131077, 3, 393348, 131077, 4, 262277, 262149, 1, 327813, 196613, 3, 393349, 196613, 4, 262278, 196613, 1, 327814, 262149, 3, 393350, 262149, 4, 262279, 262149, 1, 327815, 196613, 3, 393351, 327685, 4, 196744, 393221, 1, 262280, 196613, 1, 327816, 262149, 3, 393352, 131077, 4, 131203, 131077, 1, 196739, 65541, 3, 262281, 262149, 1, 262282, 196613, 1, 262283, 262149, 1, 262284, 196613, 1, 262285, 262149, 1, 262286, 196613, 1, 262287, 262149, 1, 393353, 196613, 4, 393354, 262149, 4, 393355, 327685, 4, 393356, 131077, 4, 393357, 196613, 4, 393358, 262149, 4, 327817, 196613, 3, 327819, 327685, 3, 327820, 262149, 3, 327821, 196613, 3, 327818, 262149, 3, 327822, 262149, 3, 327823, 327685, 3, 131204, 393221, 2, 196740, 393221, 3, 131216, 65541, 2, 196752, 65541, 3, 262288, 131077, 2, 327824, 196613, 3, 327825, 393221, 3, 393359, 131077, 4, 393360, 196613, 4, 393361, 262149, 4, 131217, 393221, 2, 196753, 393221, 3, 262289, 393221, 3, 65689, 524293, 3, 65690, 589829, 3, 65691, 655365, 3, -65375, 524293, 3, -65374, 589829, 3, -65373, 655365, 3, 196780, 65541, 2, 262316, 65541, 3, 327852, 65541, 4, 65709, 131077, 0, 131245, 131077, 1, 196781, 131077, 2, 262317, 131077, 3, 327853, 131077, 4, 65710, 196613, 0, 131246, 196613, 1, 196782, 196613, 2, 262318, 196613, 3, 327854, 196613, 4, 131247, 262149, 1, 196783, 262149, 2, 262319, 262149, 3, 327855, 262149, 4, 65712, 327685, 0, 131248, 327685, 1, 196784, 327685, 2, 262320, 327685, 3, 327856, 327685, 4, 131249, 393221, 1, 196785, 393221, 2, 262321, 393221, 3, 327857, 393221, 4)
+
+[node name="discoDuro" parent="." index="9" instance=ExtResource("7_oudy5")]
+position = Vector2(3224, 446)
+scale = Vector2(0.65, 0.65)
+
+[connection signal="recolectar_herramientas" from="puntos/herramienta" to="." method="_on_herramienta_recolectar_herramientas"]
+[connection signal="recolectar_herramientas" from="puntos/herramienta2" to="." method="_on_herramienta_recolectar_herramientas"]
+[connection signal="recolectar_herramientas" from="puntos/herramienta3" to="." method="_on_herramienta_recolectar_herramientas"]
+[connection signal="recolectar_herramientas" from="puntos/herramienta4" to="." method="_on_herramienta_recolectar_herramientas"]
+[connection signal="recolectar_herramientas" from="puntos/herramienta5" to="." method="_on_herramienta_recolectar_herramientas"]
+[connection signal="recolectar_herramientas" from="puntos/herramienta6" to="." method="_on_herramienta_recolectar_herramientas"]
+[connection signal="recolectar_herramientas" from="puntos/herramienta7" to="." method="_on_herramienta_recolectar_herramientas"]
+[connection signal="recolectar_herramientas" from="puntos/herramienta8" to="." method="_on_herramienta_recolectar_herramientas"]
+[connection signal="recolectar_herramientas" from="puntos/herramienta9" to="." method="_on_herramienta_recolectar_herramientas"]
+[connection signal="recolectar_herramientas" from="puntos/herramienta10" to="." method="_on_herramienta_recolectar_herramientas"]
+[connection signal="recolectar_herramientas" from="puntos/herramienta11" to="." method="_on_herramienta_recolectar_herramientas"]
+[connection signal="recolectar_herramientas" from="puntos/herramienta12" to="." method="_on_herramienta_recolectar_herramientas"]
+[connection signal="recolectar_herramientas" from="puntos/herramienta13" to="." method="_on_herramienta_recolectar_herramientas"]
+[connection signal="recolectar_herramientas" from="puntos/herramienta14" to="." method="_on_herramienta_recolectar_herramientas"]
+[connection signal="recolectar_herramientas" from="puntos/herramienta15" to="." method="_on_herramienta_recolectar_herramientas"]
+[connection signal="recolectar_herramientas" from="puntos/herramienta16" to="." method="_on_herramienta_recolectar_herramientas"]
+[connection signal="recolectar_herramientas" from="puntos/herramienta17" to="." method="_on_herramienta_recolectar_herramientas"]
+[connection signal="recolectar_herramientas" from="puntos/herramienta18" to="." method="_on_herramienta_recolectar_herramientas"]
+[connection signal="recolectar_herramientas" from="puntos/herramienta19" to="." method="_on_herramienta_recolectar_herramientas"]
+[connection signal="recolectar_herramientas" from="puntos/herramienta20" to="." method="_on_herramienta_recolectar_herramientas"]
+[connection signal="recolectar_herramientas" from="puntos/herramienta21" to="." method="_on_herramienta_recolectar_herramientas"]
+[connection signal="recolectar_herramientas" from="puntos/herramienta22" to="." method="_on_herramienta_recolectar_herramientas"]
+[connection signal="recolectar_herramientas" from="puntos/herramienta23" to="." method="_on_herramienta_recolectar_herramientas"]
+[connection signal="recolectar_herramientas" from="puntos/herramienta24" to="." method="_on_herramienta_recolectar_herramientas"]
+[connection signal="recolectar_herramientas" from="puntos/herramienta25" to="." method="_on_herramienta_recolectar_herramientas"]
+[connection signal="recolectar_herramientas" from="puntos/herramienta26" to="." method="_on_herramienta_recolectar_herramientas"]
+[connection signal="recolectar_herramientas" from="puntos/herramienta27" to="." method="_on_herramienta_recolectar_herramientas"]

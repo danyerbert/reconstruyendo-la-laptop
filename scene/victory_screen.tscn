@@ -1,94 +1,53 @@
-[gd_scene load_steps=16 format=3 uid="uid://b3snflrdyl78g"]
+[gd_scene load_steps=11 format=3 uid="uid://b3snflrdyl78g"]
 
 [ext_resource type="Script" path="res://scripts/victory_screen.gd" id="1_rsy25"]
-[ext_resource type="Texture2D" uid="uid://pv63k1is53gf" path="res://Recursos/Movimiento RET/lo haz logrado-Sheet.png" id="2_a868c"]
+[ext_resource type="Texture2D" uid="uid://i8i4de6ieena" path="res://Recursos/Fondos/pantalla_final.png" id="2_5wtlw"]
+[ext_resource type="AudioStream" uid="uid://dmdlvaoxf6u6u" path="res://Recursos/Canciones/Arcade_Machine_-_Nuclear_Wave.mp3" id="3_3a2ob"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_5dpqh"]
-atlas = ExtResource("2_a868c")
-region = Rect2(0, 0, 80, 80)
+[sub_resource type="AtlasTexture" id="AtlasTexture_j88sf"]
+atlas = ExtResource("2_5wtlw")
+region = Rect2(0, 0, 800, 600)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_eunfa"]
-atlas = ExtResource("2_a868c")
-region = Rect2(80, 0, 80, 80)
+[sub_resource type="AtlasTexture" id="AtlasTexture_ggg2g"]
+atlas = ExtResource("2_5wtlw")
+region = Rect2(800, 0, 800, 600)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_1tma7"]
-atlas = ExtResource("2_a868c")
-region = Rect2(160, 0, 80, 80)
+[sub_resource type="AtlasTexture" id="AtlasTexture_52njc"]
+atlas = ExtResource("2_5wtlw")
+region = Rect2(1600, 0, 800, 600)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_5rgw3"]
-atlas = ExtResource("2_a868c")
-region = Rect2(240, 0, 80, 80)
+[sub_resource type="AtlasTexture" id="AtlasTexture_tu4ie"]
+atlas = ExtResource("2_5wtlw")
+region = Rect2(2400, 0, 800, 600)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_ehk21"]
-atlas = ExtResource("2_a868c")
-region = Rect2(320, 0, 80, 80)
+[sub_resource type="AtlasTexture" id="AtlasTexture_3r1yn"]
+atlas = ExtResource("2_5wtlw")
+region = Rect2(3200, 0, 800, 600)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_cu311"]
-atlas = ExtResource("2_a868c")
-region = Rect2(400, 0, 80, 80)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_4fnnl"]
-atlas = ExtResource("2_a868c")
-region = Rect2(480, 0, 80, 80)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_b8u5b"]
-atlas = ExtResource("2_a868c")
-region = Rect2(560, 0, 80, 80)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_ltc3n"]
-atlas = ExtResource("2_a868c")
-region = Rect2(640, 0, 80, 80)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_coth7"]
-atlas = ExtResource("2_a868c")
-region = Rect2(720, 0, 80, 80)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_xn51k"]
-atlas = ExtResource("2_a868c")
-region = Rect2(800, 0, 80, 80)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_3v465"]
-atlas = ExtResource("2_a868c")
-region = Rect2(880, 0, 80, 80)
+[sub_resource type="AtlasTexture" id="AtlasTexture_8h02f"]
+atlas = ExtResource("2_5wtlw")
+region = Rect2(4000, 0, 800, 600)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_n6oo6"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_5dpqh")
+"texture": SubResource("AtlasTexture_j88sf")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_eunfa")
+"texture": SubResource("AtlasTexture_ggg2g")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_1tma7")
+"texture": SubResource("AtlasTexture_52njc")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_5rgw3")
+"texture": SubResource("AtlasTexture_tu4ie")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_ehk21")
+"texture": SubResource("AtlasTexture_3r1yn")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_cu311")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_4fnnl")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_b8u5b")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_ltc3n")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_coth7")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_xn51k")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_3v465")
+"texture": SubResource("AtlasTexture_8h02f")
 }],
 "loop": true,
 "name": &"celebracion",
@@ -104,12 +63,12 @@ grow_vertical = 2
 script = ExtResource("1_rsy25")
 
 [node name="Sprite2D" type="AnimatedSprite2D" parent="."]
-position = Vector2(570, 319)
-scale = Vector2(7.9, 8.025)
+position = Vector2(572.945, 326.063)
+scale = Vector2(1.44764, 1.07312)
 sprite_frames = SubResource("SpriteFrames_n6oo6")
 animation = &"celebracion"
 autoplay = "celebracion"
-frame_progress = 0.0704222
+frame_progress = 0.43884
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
 layout_mode = 2
@@ -126,5 +85,9 @@ unique_name_in_owner = true
 custom_minimum_size = Vector2(16, 16)
 layout_mode = 2
 text = "VOLVER AL MENU PRINCIPAL"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_3a2ob")
+autoplay = true
 
 [connection signal="pressed" from="VBoxContainer/MenuButton" to="." method="_on_menu_button_pressed"]

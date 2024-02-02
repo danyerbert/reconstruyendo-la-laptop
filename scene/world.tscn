@@ -1,8 +1,23 @@
-[gd_scene load_steps=7 format=3 uid="uid://bvrxnaqhvdn30"]
+[gd_scene load_steps=10 format=3 uid="uid://bvrxnaqhvdn30"]
 
 [ext_resource type="Script" path="res://scripts/world.gd" id="1_7twfy"]
 [ext_resource type="PackedScene" uid="uid://bv770a5u7bkfy" path="res://scene/player.tscn" id="2_8gtru"]
+[ext_resource type="Script" path="res://scripts/barravida.gd" id="4_nxy6w"]
 [ext_resource type="PackedScene" uid="uid://bdsghkr1c5dmi" path="res://scene/level_completed.tscn" id="5_gfbtv"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_est8e"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bcppg"]
+bg_color = Color(0.203922, 0.647059, 0.227451, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
 
 [sub_resource type="Animation" id="Animation_pjsq2"]
 length = 0.001
@@ -41,7 +56,7 @@ _data = {
 "countdown": SubResource("Animation_q677m")
 }
 
-[node name="World" type="Node2D"]
+[node name="World" type="Node2D" groups=["level"]]
 script = ExtResource("1_7twfy")
 
 [node name="Player" parent="." instance=ExtResource("2_8gtru")]
@@ -89,8 +104,12 @@ layout_mode = 2
 vertical_alignment = 1
 
 [node name="CenterContainer2" type="CenterContainer" parent="CanvasLayer"]
-offset_right = 159.0
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -159.0
 offset_bottom = 51.0
+grow_horizontal = 0
 
 [node name="countLabel" type="Label" parent="CanvasLayer/CenterContainer2"]
 custom_minimum_size = Vector2(23, 23)
@@ -98,6 +117,17 @@ layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 19
 text = "Puntos: "
+
+[node name="barravida" type="ProgressBar" parent="CanvasLayer" groups=["barravida"]]
+offset_left = 19.0
+offset_top = 51.0
+offset_right = 218.0
+offset_bottom = 78.0
+theme_override_colors/font_color = Color(0, 0, 0, 0)
+theme_override_styles/background = SubResource("StyleBoxFlat_est8e")
+theme_override_styles/fill = SubResource("StyleBoxFlat_bcppg")
+value = 100.0
+script = ExtResource("4_nxy6w")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 process_mode = 3

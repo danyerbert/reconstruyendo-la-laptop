@@ -1,8 +1,7 @@
-[gd_scene load_steps=4 format=3 uid="uid://bxr6yh86dy3gb"]
+[gd_scene load_steps=3 format=3 uid="uid://bxr6yh86dy3gb"]
 
 [ext_resource type="Script" path="res://scripts/start_menu.gd" id="1_v26uh"]
 [ext_resource type="Texture2D" uid="uid://dqd7c507gxabv" path="res://Recursos/Fondos/1nivel de montaña menu.jpg" id="2_kt8k6"]
-[ext_resource type="AudioStream" uid="uid://dmdlvaoxf6u6u" path="res://Recursos/Canciones/Arcade_Machine_-_Nuclear_Wave.mp3" id="3_bbmlu"]
 
 [node name="StartMenu" type="Node2D"]
 script = ExtResource("1_v26uh")
@@ -28,8 +27,7 @@ offset_bottom = 505.0
 text = "Salir"
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("3_bbmlu")
-autoplay = true
+process_mode = 1
 
 [connection signal="pressed" from="StartGameButton" to="." method="_on_start_game_button_pressed"]
 [connection signal="pressed" from="QuitButton" to="." method="_on_quit_button_pressed"]

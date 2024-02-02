@@ -1,7 +1,44 @@
-[gd_scene load_steps=4 format=3 uid="uid://bdsghkr1c5dmi"]
+[gd_scene load_steps=10 format=3 uid="uid://bdsghkr1c5dmi"]
 
 [ext_resource type="Script" path="res://scripts/level_completed.gd" id="1_x5s0l"]
-[ext_resource type="Texture2D" uid="uid://dqd7c507gxabv" path="res://Recursos/Fondos/1nivel de montaña menu.jpg" id="2_are02"]
+[ext_resource type="Texture2D" uid="uid://bbfggxymdu8bv" path="res://Recursos/Fondos/cargando_ret.png" id="2_wr3y1"]
+[ext_resource type="AudioStream" uid="uid://dmdlvaoxf6u6u" path="res://Recursos/Canciones/Arcade_Machine_-_Nuclear_Wave.mp3" id="3_do7ud"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rsof8"]
+atlas = ExtResource("2_wr3y1")
+region = Rect2(0, 0, 512, 434)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kal0a"]
+atlas = ExtResource("2_wr3y1")
+region = Rect2(512, 0, 512, 434)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_k7f2e"]
+atlas = ExtResource("2_wr3y1")
+region = Rect2(1024, 0, 512, 434)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5emkk"]
+atlas = ExtResource("2_wr3y1")
+region = Rect2(1536, 0, 512, 434)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_pgy7y"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rsof8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kal0a")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_k7f2e")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5emkk")
+}],
+"loop": true,
+"name": &"cargando",
+"speed": 5.0
+}]
 
 [sub_resource type="Theme" id="Theme_njv5p"]
 
@@ -23,10 +60,12 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="Sprite2D" type="Sprite2D" parent="CenterContainer"]
-position = Vector2(573, 321.5)
-scale = Vector2(1.536, 1.278)
-texture = ExtResource("2_are02")
+[node name="animation" type="AnimatedSprite2D" parent="CenterContainer"]
+position = Vector2(576, 322.5)
+scale = Vector2(2.23047, 1.46313)
+sprite_frames = SubResource("SpriteFrames_pgy7y")
+animation = &"cargando"
+autoplay = "cargando"
 
 [node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer"]
 layout_mode = 2
@@ -57,6 +96,10 @@ layout_mode = 2
 text = "SIGUIENTE NIVEL"
 icon_alignment = 1
 expand_icon = true
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_do7ud")
+autoplay = true
 
 [connection signal="pressed" from="CenterContainer/VBoxContainer/HBoxContainer/RetryButton" to="." method="_on_retry_button_pressed"]
 [connection signal="pressed" from="CenterContainer/VBoxContainer/HBoxContainer/NextLevelButton" to="." method="_on_next_level_button_pressed"]

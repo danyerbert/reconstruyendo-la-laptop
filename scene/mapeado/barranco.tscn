@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://bjpr11sfao41h"]
+
+[ext_resource type="Script" path="res://scripts/mapeado/barranco.gd" id="1_6to84"]
+[ext_resource type="Texture2D" uid="uid://ccictwt3xl6d6" path="res://Recursos/Object/trees.png" id="1_mlu8d"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xkytw"]
+size = Vector2(254, 85)
+
+[node name="barranco" type="Area2D"]
+collision_mask = 3
+script = ExtResource("1_6to84")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_mlu8d")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 22.5)
+shape = SubResource("RectangleShape2D_xkytw")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

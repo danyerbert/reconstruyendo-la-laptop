@@ -1,0 +1,278 @@
+[gd_scene load_steps=13 format=3 uid="uid://7qqh4o13etau"]
+
+[ext_resource type="PackedScene" uid="uid://bvrxnaqhvdn30" path="res://scene/world.tscn" id="1_xdnot"]
+[ext_resource type="PackedScene" uid="uid://bgy1n3y5gm3ak" path="res://scene/mundos/desierto/segundo_nivel_desierto.tscn" id="2_557va"]
+[ext_resource type="PackedScene" uid="uid://bgcdbavvuop6f" path="res://scene/level_tile_map.tscn" id="2_ndn8m"]
+[ext_resource type="PackedScene" uid="uid://c5pmml8jr347b" path="res://scene/mapeado/arena_movediza.tscn" id="3_0o5o7"]
+[ext_resource type="PackedScene" uid="uid://bleq8eqk0mvb6" path="res://scene/mapeado/fuego.tscn" id="3_evrqm"]
+[ext_resource type="Texture2D" uid="uid://bca2taop01sck" path="res://Recursos/Fondos/Nuevos Fondos/desierto/falcon 2.jpg" id="3_lgi1j"]
+[ext_resource type="Texture2D" uid="uid://bejdbja44cr73" path="res://Recursos/Fondos/Nuevos Fondos/desierto/falcon 3.jpg" id="4_n8qwu"]
+[ext_resource type="AudioStream" uid="uid://cxrgx1xp1kx0n" path="res://Recursos/Canciones/Quirky-samba_by_musicstockproduction.mp3" id="4_obt2u"]
+[ext_resource type="PackedScene" uid="uid://cg0g5terhkrn8" path="res://scene/mapeado/escorpion.tscn" id="5_mfond"]
+[ext_resource type="PackedScene" uid="uid://buwveim4xyoqp" path="res://scene/enemies/miniescorpion.tscn" id="6_w7bir"]
+[ext_resource type="PackedScene" uid="uid://bjgm3m744rx31" path="res://scene/partes y piezas/teclado.tscn" id="8_7x5w5"]
+[ext_resource type="PackedScene" uid="uid://blwq6xc3lyj2d" path="res://scene/herramienta.tscn" id="9_qdmje"]
+
+[node name="World" instance=ExtResource("1_xdnot")]
+next_level = ExtResource("2_557va")
+
+[node name="fondo" type="Node2D" parent="." index="0"]
+
+[node name="fondo" type="Sprite2D" parent="fondo" index="0"]
+position = Vector2(658.687, 381.75)
+scale = Vector2(1.19297, 1.19297)
+texture = ExtResource("3_lgi1j")
+
+[node name="fondo2" type="Sprite2D" parent="fondo" index="1"]
+position = Vector2(1973, 383)
+scale = Vector2(1.19375, 1.19375)
+texture = ExtResource("4_n8qwu")
+
+[node name="fondo3" type="Sprite2D" parent="fondo" index="2"]
+position = Vector2(3262.06, 381.75)
+scale = Vector2(1.19297, 1.19297)
+texture = ExtResource("3_lgi1j")
+
+[node name="fondo4" type="Sprite2D" parent="fondo" index="3"]
+position = Vector2(4576.38, 383)
+scale = Vector2(1.19375, 1.19375)
+texture = ExtResource("4_n8qwu")
+
+[node name="Player" parent="." index="1"]
+position = Vector2(63, 605)
+
+[node name="AudioStreamPlayer" parent="." index="4"]
+stream = ExtResource("4_obt2u")
+autoplay = true
+
+[node name="mapeado" type="Node2D" parent="." index="5"]
+
+[node name="arenaMovediza" parent="mapeado" index="0" instance=ExtResource("3_0o5o7")]
+position = Vector2(774, 648)
+
+[node name="arenaMovediza2" parent="mapeado" index="1" instance=ExtResource("3_0o5o7")]
+position = Vector2(558, 648)
+
+[node name="arenaMovediza3" parent="mapeado" index="2" instance=ExtResource("3_0o5o7")]
+position = Vector2(993, 646)
+
+[node name="arenaMovediza4" parent="mapeado" index="3" instance=ExtResource("3_0o5o7")]
+position = Vector2(1187, 646)
+
+[node name="arenaMovediza5" parent="mapeado" index="4" instance=ExtResource("3_0o5o7")]
+position = Vector2(1409, 646)
+
+[node name="arenaMovediza6" parent="mapeado" index="5" instance=ExtResource("3_0o5o7")]
+position = Vector2(1613, 646)
+
+[node name="arenaMovediza25" parent="mapeado" index="6" instance=ExtResource("3_0o5o7")]
+position = Vector2(1687, 646)
+
+[node name="arenaMovediza7" parent="mapeado" index="7" instance=ExtResource("3_0o5o7")]
+position = Vector2(1772, 646)
+
+[node name="arenaMovediza8" parent="mapeado" index="8" instance=ExtResource("3_0o5o7")]
+position = Vector2(1930, 646)
+
+[node name="arenaMovediza9" parent="mapeado" index="9" instance=ExtResource("3_0o5o7")]
+position = Vector2(2066, 646)
+
+[node name="arenaMovediza10" parent="mapeado" index="10" instance=ExtResource("3_0o5o7")]
+position = Vector2(2214, 646)
+
+[node name="arenaMovediza11" parent="mapeado" index="11" instance=ExtResource("3_0o5o7")]
+position = Vector2(2382, 646)
+
+[node name="arenaMovediza22" parent="mapeado" index="12" instance=ExtResource("3_0o5o7")]
+position = Vector2(2458, 646)
+
+[node name="arenaMovediza23" parent="mapeado" index="13" instance=ExtResource("3_0o5o7")]
+position = Vector2(2257, 646)
+
+[node name="arenaMovediza24" parent="mapeado" index="14" instance=ExtResource("3_0o5o7")]
+position = Vector2(1995, 646)
+
+[node name="arenaMovediza12" parent="mapeado" index="15" instance=ExtResource("3_0o5o7")]
+position = Vector2(2542, 646)
+
+[node name="arenaMovediza13" parent="mapeado" index="16" instance=ExtResource("3_0o5o7")]
+position = Vector2(2693, 646)
+
+[node name="arenaMovediza14" parent="mapeado" index="17" instance=ExtResource("3_0o5o7")]
+position = Vector2(2829, 646)
+
+[node name="arenaMovediza15" parent="mapeado" index="18" instance=ExtResource("3_0o5o7")]
+position = Vector2(2965, 646)
+
+[node name="arenaMovediza16" parent="mapeado" index="19" instance=ExtResource("3_0o5o7")]
+position = Vector2(3101, 646)
+
+[node name="arenaMovediza17" parent="mapeado" index="20" instance=ExtResource("3_0o5o7")]
+position = Vector2(3237, 646)
+
+[node name="arenaMovediza18" parent="mapeado" index="21" instance=ExtResource("3_0o5o7")]
+position = Vector2(3373, 646)
+
+[node name="arenaMovediza19" parent="mapeado" index="22" instance=ExtResource("3_0o5o7")]
+position = Vector2(3509, 646)
+
+[node name="arenaMovediza20" parent="mapeado" index="23" instance=ExtResource("3_0o5o7")]
+position = Vector2(3645, 646)
+
+[node name="arenaMovediza21" parent="mapeado" index="24" instance=ExtResource("3_0o5o7")]
+position = Vector2(3781, 646)
+
+[node name="enemies" type="Node2D" parent="." index="6"]
+
+[node name="fuego" parent="enemies" index="0" instance=ExtResource("3_evrqm")]
+position = Vector2(324, 633)
+
+[node name="fuego2" parent="enemies" index="1" instance=ExtResource("3_evrqm")]
+position = Vector2(340, 633)
+
+[node name="fuego3" parent="enemies" index="2" instance=ExtResource("3_evrqm")]
+position = Vector2(356, 633)
+
+[node name="fuego4" parent="enemies" index="3" instance=ExtResource("3_evrqm")]
+position = Vector2(372, 633)
+
+[node name="fuego5" parent="enemies" index="4" instance=ExtResource("3_evrqm")]
+position = Vector2(388, 633)
+
+[node name="fuego6" parent="enemies" index="5" instance=ExtResource("3_evrqm")]
+position = Vector2(404, 633)
+
+[node name="fuego7" parent="enemies" index="6" instance=ExtResource("3_evrqm")]
+position = Vector2(420, 633)
+
+[node name="fuego8" parent="enemies" index="7" instance=ExtResource("3_evrqm")]
+position = Vector2(436, 633)
+
+[node name="fuego9" parent="enemies" index="8" instance=ExtResource("3_evrqm")]
+position = Vector2(452, 633)
+
+[node name="escorpion" parent="enemies" index="9" instance=ExtResource("5_mfond")]
+position = Vector2(2887, 553)
+
+[node name="miniescorpion" parent="enemies" index="10" instance=ExtResource("6_w7bir")]
+position = Vector2(2224, 499)
+scale = Vector2(0.45, 0.45)
+
+[node name="miniescorpion2" parent="enemies" index="11" instance=ExtResource("6_w7bir")]
+position = Vector2(2269, 499)
+scale = Vector2(0.45, 0.45)
+
+[node name="puntos" type="Node2D" parent="." index="7"]
+
+[node name="herramienta" parent="puntos" index="0" instance=ExtResource("9_qdmje")]
+position = Vector2(694, 606)
+
+[node name="herramienta2" parent="puntos" index="1" instance=ExtResource("9_qdmje")]
+position = Vector2(696, 571)
+
+[node name="herramienta3" parent="puntos" index="2" instance=ExtResource("9_qdmje")]
+position = Vector2(698, 541)
+
+[node name="herramienta4" parent="puntos" index="3" instance=ExtResource("9_qdmje")]
+position = Vector2(1093, 615)
+
+[node name="herramienta5" parent="puntos" index="4" instance=ExtResource("9_qdmje")]
+position = Vector2(1093, 580)
+
+[node name="herramienta6" parent="puntos" index="5" instance=ExtResource("9_qdmje")]
+position = Vector2(1093, 541)
+
+[node name="herramienta7" parent="puntos" index="6" instance=ExtResource("9_qdmje")]
+position = Vector2(1695, 591)
+
+[node name="herramienta8" parent="puntos" index="7" instance=ExtResource("9_qdmje")]
+position = Vector2(1695, 565)
+
+[node name="herramienta9" parent="puntos" index="8" instance=ExtResource("9_qdmje")]
+position = Vector2(1696, 539)
+
+[node name="herramienta10" parent="puntos" index="9" instance=ExtResource("9_qdmje")]
+position = Vector2(1695, 508)
+
+[node name="herramienta11" parent="puntos" index="10" instance=ExtResource("9_qdmje")]
+position = Vector2(2082, 530)
+
+[node name="herramienta12" parent="puntos" index="11" instance=ExtResource("9_qdmje")]
+position = Vector2(2082, 504)
+
+[node name="herramienta13" parent="puntos" index="12" instance=ExtResource("9_qdmje")]
+position = Vector2(2082, 479)
+
+[node name="herramienta14" parent="puntos" index="13" instance=ExtResource("9_qdmje")]
+position = Vector2(2082, 453)
+
+[node name="herramienta15" parent="puntos" index="14" instance=ExtResource("9_qdmje")]
+position = Vector2(2551, 451)
+
+[node name="herramienta16" parent="puntos" index="15" instance=ExtResource("9_qdmje")]
+position = Vector2(2551, 423)
+
+[node name="herramienta17" parent="puntos" index="16" instance=ExtResource("9_qdmje")]
+position = Vector2(2551, 394)
+
+[node name="herramienta18" parent="puntos" index="17" instance=ExtResource("9_qdmje")]
+position = Vector2(2829, 541)
+
+[node name="herramienta19" parent="puntos" index="18" instance=ExtResource("9_qdmje")]
+position = Vector2(2860, 517)
+
+[node name="herramienta20" parent="puntos" index="19" instance=ExtResource("9_qdmje")]
+position = Vector2(2887, 493)
+
+[node name="herramienta21" parent="puntos" index="20" instance=ExtResource("9_qdmje")]
+position = Vector2(2977, 548)
+
+[node name="herramienta22" parent="puntos" index="21" instance=ExtResource("9_qdmje")]
+position = Vector2(2954, 526)
+
+[node name="herramienta23" parent="puntos" index="22" instance=ExtResource("9_qdmje")]
+position = Vector2(2927, 508)
+
+[node name="herramienta24" parent="puntos" index="23" instance=ExtResource("9_qdmje")]
+position = Vector2(3280, 478)
+
+[node name="herramienta25" parent="puntos" index="24" instance=ExtResource("9_qdmje")]
+position = Vector2(3280, 440)
+
+[node name="herramienta26" parent="puntos" index="25" instance=ExtResource("9_qdmje")]
+position = Vector2(3281, 413)
+
+[node name="LevelTileMap" parent="." index="8" instance=ExtResource("2_ndn8m")]
+position = Vector2(506, 383)
+layer_0/tile_data = PackedInt32Array(1048546, 262148, 1, 1048547, 196612, 1, 1048548, 262148, 1, 1048549, 196612, 1, 1048550, 262148, 1, 1048551, 196612, 1, 1048552, 262148, 1, 1048553, 196612, 1, 1048554, 262148, 1, 1048555, 196612, 1, 1048556, 262148, 1, 1048557, 196612, 1, 1048558, 262148, 1, 1048559, 196612, 1, 1048560, 262148, 1, 1048545, 262148, 1, 1048561, 196612, 1, 1048562, 262148, 1, 1048544, 196612, 1, 1048543, 327684, 2, 983007, 393220, 3, 917471, 393220, 3, 851935, 393220, 3, 786399, 393220, 3, 720863, 393220, 3, 655327, 393220, 3, 589791, 393220, 3, 524255, 393220, 3, 458719, 393220, 3, 393183, 393220, 3, 327647, 393220, 3, 262111, 393220, 3, 196575, 393220, 3, 131039, 393220, 3, 65503, 393220, 3, 1048563, 393220, 2, 1114099, 393220, 3, 1179635, 327684, 2, 1114095, 131076, 3, 1179631, 131076, 4, 1114096, 196612, 3, 1179632, 196612, 4, 1114097, 262148, 3, 1179633, 262148, 4, 1114098, 327684, 3, 1179634, 327684, 4, 1114091, 131076, 3, 1179627, 131076, 4, 1114092, 196612, 3, 1179628, 196612, 4, 1114093, 262148, 3, 1179629, 262148, 4, 1114094, 327684, 3, 1179630, 327684, 4, 1114087, 131076, 3, 1179623, 131076, 4, 1114088, 196612, 3, 1179624, 196612, 4, 1114089, 262148, 3, 1179625, 262148, 4, 1114090, 327684, 3, 1179626, 327684, 4, 1114083, 131076, 3, 1179619, 131076, 4, 1114084, 196612, 3, 1179620, 196612, 4, 1114085, 262148, 3, 1179621, 262148, 4, 1114086, 327684, 3, 1179622, 327684, 4, 1114079, 131076, 3, 1179615, 131076, 4, 1114080, 196612, 3, 1179616, 196612, 4, 1114081, 262148, 3, 1179617, 262148, 4, 1114082, 327684, 3, 1179618, 327684, 4, 1179636, 196612, 1, 1179637, 262148, 1, 1179638, 196612, 1, 1179639, 262148, 1, 1179640, 196612, 1, 1179641, 262148, 1, 1179642, 196612, 1, 1179643, 262148, 1, 1245171, 131076, 4, 1245172, 196612, 4, 1245173, 262148, 4, 1245174, 131076, 4, 1245176, 262148, 4, 1245177, 327684, 4, 1245178, 262148, 4, 1245179, 327684, 4, 1245175, 196612, 4, 1245170, 65540, 4, 1179644, 196612, 1, 1114109, 65540, 3, 1179645, 131076, 2, 1245180, 196612, 4, 1245181, 196612, 4, 1245182, 196612, 4, 1245183, 393220, 4, 1179646, 262148, 2, 1114112, 262148, 4, 1114113, 393220, 4, 1179647, 196612, 4, 1114110, 262148, 3, 1114111, 262148, 3, 1048576, 262148, 3, 1048577, 393220, 2, 1048585, 65540, 2, 983050, 131076, 1, 1048586, 131076, 2, 983051, 196612, 1, 1048587, 196612, 2, 983052, 262148, 1, 1048588, 262148, 2, 983053, 327684, 1, 1048589, 327684, 2, 1048590, 393220, 2, 1048598, 65540, 2, 983063, 131076, 1, 1048599, 131076, 2, 983064, 196612, 1, 1048600, 196612, 2, 983065, 262148, 1, 1048601, 262148, 2, 983066, 327684, 1, 1048602, 327684, 2, 1048603, 393220, 2, 1048610, 65540, 2, 983075, 131076, 1, 1048611, 131076, 2, 983076, 196612, 1, 1048612, 196612, 2, 983077, 262148, 1, 1048613, 262148, 2, 983078, 327684, 1, 1048614, 327684, 2, 1048615, 393220, 2, 1048624, 65540, 2, 983089, 131076, 1, 1048625, 131076, 2, 983090, 196612, 1, 1048626, 196612, 2, 983091, 262148, 1, 1048627, 262148, 2, 983092, 327684, 1, 1048628, 327684, 2, 1048629, 393220, 2, 1114160, 65540, 4, 1114161, 131076, 4, 1114162, 196612, 4, 1114163, 262148, 4, 1114164, 327684, 4, 1114165, 393220, 4, 1114146, 65540, 4, 1114147, 131076, 4, 1114148, 196612, 4, 1114149, 262148, 4, 1114150, 327684, 4, 1114151, 393220, 4, 1114134, 65540, 4, 1114135, 131076, 4, 1114136, 196612, 4, 1114137, 262148, 4, 1114138, 327684, 4, 1114139, 393220, 4, 1114121, 65540, 4, 1114122, 131076, 4, 1114123, 196612, 4, 1114124, 262148, 4, 1114125, 327684, 4, 1114126, 393220, 4, 1048637, 65540, 2, 983102, 131076, 1, 1048638, 131076, 2, 983103, 196612, 1, 1048639, 196612, 2, 983104, 262148, 1, 1048640, 262148, 2, 983105, 327684, 1, 1048641, 327684, 2, 1048642, 393220, 2, 1114173, 65540, 4, 1114174, 131076, 4, 1114175, 196612, 4, 1114176, 262148, 4, 1114177, 327684, 4, 1114178, 393220, 4, 917577, 524292, 3, 917578, 589828, 3, 917579, 655364, 3, 786512, 524292, 3, 786513, 589828, 3, 786514, 655364, 3, 655447, 524292, 3, 655448, 589828, 3, 655449, 655364, 3, 655457, 524292, 3, 655458, 589828, 3, 655459, 655364, 3, 524395, 262148, 1, 524396, 196612, 1, 524397, 262148, 1, 327795, 524292, 3, 327796, 589828, 3, 393341, 65540, 2, 327806, 131076, 1, 393342, 131076, 2, 327807, 196612, 1, 393343, 196612, 2, 327808, 262148, 1, 393344, 262148, 2, 327809, 327684, 1, 393345, 327684, 2, 393346, 393220, 2, 458877, 65540, 4, 458878, 131076, 4, 458879, 196612, 4, 458880, 262148, 4, 458881, 327684, 4, 458882, 393220, 4, 589961, 524292, 3, 589962, 589828, 3, 589963, 655364, 3, 852111, 65540, 3, 786576, 327684, 2, 852112, 131076, 2, 786577, 196612, 1, 852113, 196612, 2, 786578, 196612, 1, 852114, 196612, 2, 786579, 262148, 1, 852115, 262148, 2, 852116, 196612, 2, 786580, 196612, 1, 786581, 262148, 1, 852117, 262148, 2, 786582, 196612, 1, 852118, 196612, 2, 786583, 262148, 1, 852119, 262148, 2, 786584, 196612, 1, 852120, 196612, 2, 786585, 262148, 1, 852121, 262148, 2, 786586, 262148, 1, 852122, 196612, 2, 786587, 131076, 2, 852123, 262148, 2, 917648, 131076, 3, 917649, 196612, 3, 917650, 262148, 3, 917651, 327684, 3, 917652, 131076, 3, 917653, 196612, 3, 917654, 262148, 3, 917655, 327684, 3, 917656, 131076, 3, 917657, 196612, 3, 917658, 262148, 3, 917659, 327684, 3, 983184, 131076, 4, 983185, 196612, 4, 983186, 262148, 4, 983187, 327684, 4, 983188, 131076, 4, 983189, 196612, 4, 983190, 262148, 4, 983191, 327684, 4, 983192, 131076, 4, 983194, 262148, 4, 983195, 327684, 4, 983193, 196612, 4, 983183, 65540, 4, 917647, 65540, 3, 786575, 65540, 3, 786588, 393220, 2, 852124, 393220, 3, 917660, 393220, 3, 983196, 393220, 4, 721039, 65540, 2, 721040, 393220, 2, 721051, 65540, 2, 721052, 393220, 2, 589930, 196612, 3, 589931, 196612, 2, 589932, 262148, 2, 589933, 196612, 3, 524394, 327684, 2, 589929, 65540, 3, 524393, 65540, 3, 458857, 131076, 1, 655465, 65540, 4, 655466, 131076, 4, 655467, 196612, 4, 655468, 262148, 4, 655469, 327684, 4, 655470, 327684, 4, 589934, 327684, 2, 524398, 196612, 1, 589936, 393220, 3, 524400, 393220, 3, 524399, 262148, 1, 458863, 65540, 2, 458864, 393220, 2, 589935, 327684, 2, 655471, 327684, 4, 655472, 393220, 4, 458858, 327684, 1, 589987, 524292, 3, 589988, 589828, 3, 589989, 655364, 3, 458924, 524292, 3, 458925, 589828, 3, 458926, 655364, 3, 327859, 524292, 3, 327860, 589828, 3, 327861, 655364, 3, 262333, 65540, 2, 327869, 65540, 3, 393405, 65540, 4, 196798, 131076, 1, 262334, 131076, 2, 327870, 131076, 3, 393406, 131076, 4, 196799, 196612, 1, 262335, 196612, 2, 327871, 196612, 3, 393407, 196612, 4, 196800, 262148, 1, 262336, 262148, 2, 327872, 262148, 3, 393408, 262148, 4, 196801, 327684, 1, 262337, 327684, 2, 327873, 327684, 3, 393409, 327684, 4, 262338, 393220, 2, 327874, 393220, 3, 393410, 393220, 4, 1048574, 196612, 1, 1048575, 196612, 1, 983040, 262148, 1, 983041, 327684, 1, 1048573, 131076, 1)
+
+[node name="teclado" parent="." index="9" instance=ExtResource("8_7x5w5")]
+position = Vector2(3582, 414)
+scale = Vector2(0.5, 0.5)
+
+[connection signal="recolectar_herramientas" from="puntos/herramienta" to="." method="_on_herramienta_recolectar_herramientas"]
+[connection signal="recolectar_herramientas" from="puntos/herramienta2" to="." method="_on_herramienta_recolectar_herramientas"]
+[connection signal="recolectar_herramientas" from="puntos/herramienta3" to="." method="_on_herramienta_recolectar_herramientas"]
+[connection signal="recolectar_herramientas" from="puntos/herramienta4" to="." method="_on_herramienta_recolectar_herramientas"]
+[connection signal="recolectar_herramientas" from="puntos/herramienta5" to="." method="_on_herramienta_recolectar_herramientas"]
+[connection signal="recolectar_herramientas" from="puntos/herramienta6" to="." method="_on_herramienta_recolectar_herramientas"]
+[connection signal="recolectar_herramientas" from="puntos/herramienta7" to="." method="_on_herramienta_recolectar_herramientas"]
+[connection signal="recolectar_herramientas" from="puntos/herramienta8" to="." method="_on_herramienta_recolectar_herramientas"]
+[connection signal="recolectar_herramientas" from="puntos/herramienta9" to="." method="_on_herramienta_recolectar_herramientas"]
+[connection signal="recolectar_herramientas" from="puntos/herramienta10" to="." method="_on_herramienta_recolectar_herramientas"]
+[connection signal="recolectar_herramientas" from="puntos/herramienta11" to="." method="_on_herramienta_recolectar_herramientas"]
+[connection signal="recolectar_herramientas" from="puntos/herramienta12" to="." method="_on_herramienta_recolectar_herramientas"]
+[connection signal="recolectar_herramientas" from="puntos/herramienta13" to="." method="_on_herramienta_recolectar_herramientas"]
+[connection signal="recolectar_herramientas" from="puntos/herramienta14" to="." method="_on_herramienta_recolectar_herramientas"]
+[connection signal="recolectar_herramientas" from="puntos/herramienta15" to="." method="_on_herramienta_recolectar_herramientas"]
+[connection signal="recolectar_herramientas" from="puntos/herramienta16" to="." method="_on_herramienta_recolectar_herramientas"]
+[connection signal="recolectar_herramientas" from="puntos/herramienta17" to="." method="_on_herramienta_recolectar_herramientas"]
+[connection signal="recolectar_herramientas" from="puntos/herramienta18" to="." method="_on_herramienta_recolectar_herramientas"]
+[connection signal="recolectar_herramientas" from="puntos/herramienta19" to="." method="_on_herramienta_recolectar_herramientas"]
+[connection signal="recolectar_herramientas" from="puntos/herramienta20" to="." method="_on_herramienta_recolectar_herramientas"]
+[connection signal="recolectar_herramientas" from="puntos/herramienta21" to="." method="_on_herramienta_recolectar_herramientas"]
+[connection signal="recolectar_herramientas" from="puntos/herramienta22" to="." method="_on_herramienta_recolectar_herramientas"]
+[connection signal="recolectar_herramientas" from="puntos/herramienta23" to="." method="_on_herramienta_recolectar_herramientas"]
+[connection signal="recolectar_herramientas" from="puntos/herramienta24" to="." method="_on_herramienta_recolectar_herramientas"]
+[connection signal="recolectar_herramientas" from="puntos/herramienta25" to="." method="_on_herramienta_recolectar_herramientas"]
+[connection signal="recolectar_herramientas" from="puntos/herramienta26" to="." method="_on_herramienta_recolectar_herramientas"]

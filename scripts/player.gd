@@ -3,29 +3,34 @@ extends CharacterBody2D
 @export var movement_data : PlayerMovementData
 
 var air_jump = false
+var hitplayer = false
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 
 @onready var animated_sprite_2d = $AnimatedSprite2D
 @onready var starting_position = global_position
+
 func _physics_process(_delta):
 	# Add the gravity.
+	
 	apply_gravity(_delta)
-
-	# Handle Jump.
-	handle_jump()
+	if !hitplayer:
+		# Handle Jump.
+		handle_jump()
+		
+		
+		var input_axis = Input.get_axis("izquierda", "derecha")
+		
+		#Hacemos el llamado a la función de acceleración
+		handle_acceleration(input_axis, _delta)
+		
+		handle_air_acceleration(input_axis, _delta)
+		
+		#Hacemos el llamado a la función de fricción
+		apply_friction(input_axis, _delta)
+		
+		animation_update(input_axis)
 	
-	var input_axis = Input.get_axis("izquierda", "derecha")
-	
-	#Hacemos el llamado a la función de acceleración
-	handle_acceleration(input_axis, _delta)
-	
-	handle_air_acceleration(input_axis, _delta)
-	
-	#Hacemos el llamado a la función de fricción
-	apply_friction(input_axis, _delta)
-	
-	animation_update(input_axis)
 	move_and_slide()
 	
 #Funcion para aplicar la gravedad al objeto
@@ -70,8 +75,25 @@ func animation_update(input_axis):
 		
 	if not is_on_floor():
 		animated_sprite_2d.play("jump")
-
-func _on_hazard_detector_area_entered(_area):
+		
+func hit():
+	hitplayer = true
+	velocity = Vector2.ZERO
 	
-	global_position = starting_position
+	if animated_sprite_2d.flip_h:
+		velocity = Vector2(-60,-200)
+	else:
+		velocity = Vector2(60,-200)
+	animated_sprite_2d.play("hit")
+	await animated_sprite_2d.animation_finished 
+	velocity = Vector2.ZERO
+	hitplayer = false
+	get_tree().get_nodes_in_group("barravida")[0].disminuirvida(20)
+	
+func dead():
+	set_physics_process(false)
+	animated_sprite_2d.play("hit")
+	await animated_sprite_2d.animation_finished
+	queue_free()
+	get_tree().get_nodes_in_group("level")[0]._on_level_completed_retry()
 

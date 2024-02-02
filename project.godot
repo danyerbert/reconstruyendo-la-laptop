@@ -19,6 +19,12 @@ config/icon="res://ret.svg"
 
 Events="*res://scripts/Eventos/Events.gd"
 LevelTransition="*res://scene/level_transition.tscn"
+Textomemoria="*res://scene/texto/textomemoria.tscn"
+Cargador="*res://scene/texto/cargador.tscn"
+TextoTarjeta="*res://scene/texto/texto_tarjeta.tscn"
+TextoTeclado="*res://scene/texto/texto_teclado.tscn"
+TextoDiscoDuro="*res://scene/texto/texto_disco_duro.tscn"
+Carcasas="*res://scene/texto/carcasas.tscn"
 
 [input]
 
